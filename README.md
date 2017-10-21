@@ -1,4 +1,4 @@
-######CAN Decoder
+###### CAN Decoder
 
 This FPGA project can handle all types of CAN Frames by identifying them as well as leading with CAN Bit Timing.
 
