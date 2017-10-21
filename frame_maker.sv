@@ -35,6 +35,7 @@ module FR_MAKER(input reset, RX, SP, ERROR, F_ITMSS,
 	if(reset == 1)begin
 		cont <= 9'd0;
 		estado_atual <= sts1;
+		end //miss an end?
     BRS <= 1'b0;
     F_OVRLD <= 1'b1;
 	end
