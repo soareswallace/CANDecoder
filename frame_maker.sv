@@ -39,7 +39,7 @@ module FR_MAKER(input reset, RX, SP, ERROR, F_ITMSS,
     F_OVRLD <= 1'b1;
 	end
   else begin
-  	cont <= cont + 1'd;
+  	cont <= cont + 9'd1;
   end
 
   case(estado_atual)
@@ -47,6 +47,9 @@ module FR_MAKER(input reset, RX, SP, ERROR, F_ITMSS,
       if (RX == 1'b0)begin
         estado_atual <= sts1;
         cont <= 9'd0;
+      end
+      else begin
+        estado_atual <= sts2;
       end
     end
     sts2: begin		//SOF

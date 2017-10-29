@@ -20,7 +20,7 @@ module OE_MAKER(input RX, SP, ERROR, F_OVRLD,
       F_ITMSS =< 1'b1;
     end
     else begin
-      cont <= cont + 1'd;
+      cont <= cont + 9'd1;
   	end
 
   case(estado_atual)
