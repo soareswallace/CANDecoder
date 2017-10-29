@@ -35,10 +35,12 @@ module FR_MAKER(input reset, RX, SP, ERROR, F_ITMSS,
 	if(reset == 1)begin
 		cont <= 9'd0;
 		estado_atual <= sts1;
-		end //miss an end?
     BRS <= 1'b0;
     F_OVRLD <= 1'b1;
 	end
+  else begin
+  	cont <= cont + 1'd;
+  end
 
   case(estado_atual)
     sts1: begin		//BUS IDLE
@@ -52,16 +54,15 @@ module FR_MAKER(input reset, RX, SP, ERROR, F_ITMSS,
       cont <= 9'd0;
     end
     sts3: begin		//IDENTIFIER
-      IDF [cont] <= RX;//Verificar este assignment bit a bit #duvida contador esta sendo incrementado?
+      IDF [cont] <= RX;//Verificar este assignment bit a bit
       if (cont >= 9'd10)begin
         estado_atual <= sts4;
         cont <= 9'd0;
       end
     end
-    sts4: begin		//RTR #duvida -> este estado esta salvando o RTR? ou esta salvando somente o IDF para ser usando no ext
+    sts4: begin		//RTR
       estado_atual <= sts5;
       IDF_ex [10:0] <= IDF; //Verificar este assignment
-	  RTR <= RX; //my modification
       cont <= 9'd0;
     end
     sts5: begin		//IDE
@@ -184,12 +185,10 @@ module FR_MAKER(input reset, RX, SP, ERROR, F_ITMSS,
 
     sts_E7: begin			//RTR EXTENDED
       estado_atual <= sts_E8;
-	  RTR <= RX; //my modification
       cont <= 9'd0;
     end
     sts_E8: begin			//EDL
       estado_atual <= sts_E9;
-	  EDL <= RX;
       cont <= 9'd0;
     end
     sts_E9: begin			//r0
@@ -288,7 +287,7 @@ module FR_MAKER(input reset, RX, SP, ERROR, F_ITMSS,
       cont <= 9'd0;
     end
 
-  //---------------Tratando estados finais, INTERMISSION, ERROR e OVER LOAD---------------//
+  //---------------Tratando estados finais, INTERMISSION, ERROR e OVERLOAD---------------//
 
     sts_BC13: begin		//EOF_BASE
       if (cont >= 9'd6)begin
@@ -319,14 +318,14 @@ module FR_MAKER(input reset, RX, SP, ERROR, F_ITMSS,
         estado_atual <= sts1;
         cont <= 9'd0;
       end
-      if (RX == 1'b0)begin			//Nesse caso, já estamos no primeiro
-        estado_atual <= sts_OVL;//bit de Overload????
+      if (RX == 1'b0)begin				//Nesse caso, já estamos no primeiro
+        estado_atual <= sts_OVL;	//bit de Overload
         F_OVRLD <= 1'b0;
         cont <= 9'd0;
       end
     end
     sts_OVL:begin			//OVERLOAD
-      	F_OVRLD <= 1'b1;
+      F_OVRLD <= 1'b1;
     	if (F_ITMSS == 1'b0)begin
         estado_atual <= sts_INT;
         cont <= 9'd0;
