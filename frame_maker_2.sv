@@ -5,7 +5,7 @@ always_comb begin  //definindo oq fazer nos estados de forma combinacional
     sts1: begin			//Não faz nada no BUS IDLE
     end
     sts2: begin
-      F_STF = 1'b0;	//Estado SOF ativa a FLAG de Stuff
+    	F_STF = 1'b0;	//Estado SOF ativa a FLAG de Stuff
     end
     sts3: begin
     end
@@ -156,7 +156,8 @@ always_comb begin  //definindo oq fazer nos estados de forma combinacional
       	F_EOF = 1'b1;
     end
     sts_OVL:begin
-      	F_OVRLD = 1'b1;
+    end
+    sts_EFB:begin
     end
     endcase
   end
