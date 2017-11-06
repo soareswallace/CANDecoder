@@ -1,6 +1,6 @@
 //ERROR BLOCK
 
-module FR_MAKER(input reset, SP, STF_E, EOF_E, CRC_E, FRM_E,
+module ERRO_BLOCK(input reset, SP, STF_E, EOF_E, CRC_E, FRM_E,
                 output reg [1:0] ERROR,
                );
 
@@ -21,6 +21,7 @@ module FR_MAKER(input reset, SP, STF_E, EOF_E, CRC_E, FRM_E,
       sts2: begin		//ERROR
           estado_atual <= sts1;
       end
+    endcase
   end
     
   always_comb begin  //definindo oq fazer nos estados de forma combinacional
@@ -31,6 +32,6 @@ module FR_MAKER(input reset, SP, STF_E, EOF_E, CRC_E, FRM_E,
       sts2: begin		//ERROR
           ERROR = 1'b0;
       end
-    end
+    endcase
   end
 endmodule

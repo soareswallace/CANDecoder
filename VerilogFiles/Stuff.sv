@@ -1,6 +1,6 @@
 //STUFF BLOCK
 
-module Stuff (input reset, RX, SP
+module STUFF (input reset, RX, SP
               output sp_decision
                );
 
@@ -18,18 +18,18 @@ begin
   end
   
   if(previous_bit == RX)begin
-    if(cont==5)begin
+    if(cont==4)begin
         cont <= 9'd0;
     end
     else begin
-        cont <= cont + 9'd1;
-        sp_decison = ~sp_decison;
-    end
+      	cont <= cont + 9'd1;
+      	sp_decison = ~sp_decison;
+  	end
   end
   if(previous_bit != actual_bit)begin
       sp_decision <= ~sp_decision;
       cont <= 9'd0;
   end
   previous_bit <= RX;
-  end
+	end
 endmodule
