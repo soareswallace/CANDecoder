@@ -16,7 +16,7 @@ module FR_MAKER(input reset, RX, SP, ERROR, F_ITMSS,
   
 	parameter sts1 = 0, sts2 = 1, sts3 = 2, sts4 = 3, sts5 = 4,
   					sts_B6 = 5, sts_E6 = 6, sts_BF7 = 7, sts_BCD7 = 8,
-  					sts_BCR7 = 9, sts_E7 = 10, //...
+  					sts_BCR7 = 9, sts_E7 = 10,
   
   
   initial F_OVRLD = 1'b1;
@@ -44,7 +44,7 @@ module FR_MAKER(input reset, RX, SP, ERROR, F_ITMSS,
       cont <= 9'd0;
     end
     else begin
-  	cont <= cont + 9'd1;
+  	  cont <= cont + 9'd1;
   	end
   end
 
