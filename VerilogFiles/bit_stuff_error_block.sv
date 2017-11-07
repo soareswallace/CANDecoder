@@ -1,6 +1,6 @@
 //BIT STUFFING ERROR
 
-module FR_MAKER(input reset, SP, RX, F_STF,
+module BIT_STUFF_ERROR(input reset, SP, RX, F_STF,
                 output reg [1:0] STF_ERR,
                );
 
