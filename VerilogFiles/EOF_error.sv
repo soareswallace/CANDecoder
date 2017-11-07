@@ -29,7 +29,7 @@ always_ff @ (posedge SP or posedge reset)begin
                 cont <= 9'd0;
             end
             else begin
-                if(cont<=6 && RX==0)begin //form error found
+                if(cont<=6 && RX==0)begin //EOF Error found
                     EOF_Flag <= 1'b0;
                     cont <= 9'd0;
                     estado_atual <= sts1;
