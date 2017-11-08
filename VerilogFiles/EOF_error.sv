@@ -12,6 +12,7 @@ always_ff @ (posedge SP or posedge reset)begin
     if (reset) begin
         estado_atual <= sts1;
         EOF_Error <= 1'b1;
+        cont <= 9'd0;
     end
 
     case(estado_atual)
