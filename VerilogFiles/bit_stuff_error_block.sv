@@ -51,14 +51,3 @@ module BIT_STUFF_ERROR(input reset, SP, RX, F_STF,
   		end
     endcase
   end
-    always_comb begin
-      case(estado_atual)
-        sts1: begin		//WATING FOR STUFF AREA
-            ERROR = 1'b1;
-        end
-        sts2: begin		//STUFF AREA
-            ERROR = 1'b0;
-        end
-      endcase
-    end
-endmodule
