@@ -7,7 +7,7 @@ module OE_MAKER(input RX, SP, ERROR, F_OVRLD,
   reg [8:0]cont;
   reg [7:0]estado_atual;
   
-	parameter sts1 = 0, sts2 = 1, sts3 = 2, sts4 = 3, sts5 = 4;//...
+	parameter sts1 = 0, sts2 = 1, sts3 = 2, sts4 = 3, sts5 = 4;
   
   initial F_ITMSS = 1'b1;
 	initial cont = 9'd0;
@@ -64,8 +64,5 @@ module OE_MAKER(input RX, SP, ERROR, F_OVRLD,
         F_ITMSS <= 1'b0;
       end
     end
-    end
-  always_comb begin  //definindo oq fazer nos estados de forma combinacional
-    case(estado_atual)
-    sts1: begin			//Não faz nada no BUS IDLE
-    end
+  endcase
+endmodule

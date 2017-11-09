@@ -1,12 +1,12 @@
 //ERROR BLOCK
 
-module ERROR_BLOCK(input reset, SP, STF_E, EOF_E, CRC_E, FRM_E,
+module ERRO_BLOCK(input reset, SP, STF_E, EOF_E, CRC_E, FRM_E,
                 output reg [1:0] ERROR,
                );
 
-  reg [7:0]estado_atual;
+	reg [7:0]estado_atual;
 	parameter sts1 = 0, sts2 = 1;
-  initial ERROR = 1'b1;
+	initial ERROR = 1'b1;
   
   always_ff @ (posedge SP or posedge reset) begin
     if(reset == 1)begin
