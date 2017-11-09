@@ -1,0 +1,4 @@
+module BitStuffErrorBock( reset, SP, RX, F_STF, STF_ERR);
+	input reset, SP, RX, F_STF;
+	output reg [1:0] STF_ERR
+									

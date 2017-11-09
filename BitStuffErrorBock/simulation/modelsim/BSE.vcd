@@ -1,0 +1,119 @@
+$date
+	Thu Nov 09 00:24:11 2017
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module bitStuff_TB $end
+$var reg 1 ! reset $end
+$var reg 1 " SP $end
+$var reg 1 # RX $end
+$var reg 1 $ F_STF $end
+$var wire 1 % STF_ERR $end
+
+$scope module block $end
+$var parameter 32 & sts1 $end
+$var parameter 32 ' sts2 $end
+$var wire 1 ( reset $end
+$var wire 1 ) SP $end
+$var wire 1 * RX $end
+$var wire 1 + F_STF $end
+$var reg 1 , STF_ERR $end
+$var reg 8 - estado_atual [7:0] $end
+$var reg 1 . previous_bit $end
+$var reg 9 / cont [8:0] $end
+$var reg 9 0 i [8:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+0#
+0$
+1,
+b0 -
+x.
+b0 /
+b1 0
+b0 &
+b1 '
+1%
+0+
+0*
+0)
+1(
+$end
+#10
+1"
+0!
+1)
+0(
+b10 0
+b1 -
+#20
+0"
+0)
+#30
+1"
+1)
+b11 0
+0.
+#40
+0"
+0)
+#50
+1"
+1)
+b100 0
+b1 /
+#60
+0"
+0)
+#70
+1"
+1)
+b101 0
+b10 /
+#80
+0"
+0)
+#90
+1"
+1)
+b110 0
+b11 /
+#100
+0"
+0)
+#110
+1"
+1#
+1*
+1)
+b111 0
+b0 /
+1.
+#120
+0"
+0#
+0*
+0)
+#130
+1"
+1)
+b1000 0
+0.
+#140
+0"
+0)
+#150
+1"
+1)
+b1001 0
+b1 /
