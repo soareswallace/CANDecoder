@@ -1,13 +1,12 @@
 //STUFFING BLOCK
 
 module STUFF_BLOCK(input reset, RX, SP, F_STF,
-              output sp_decision
+              output reg sp_decision
                );
 
 parameter control = 0;
 reg [8:0]cont;
 reg previous_bit;
-
 initial previous_bit = ~RX;
 initial sp_decision = 1'b0;
 
@@ -25,7 +24,7 @@ begin
       end
       else begin
           cont <= cont + 9'd1;
-          sp_decison = ~sp_decison;
+          sp_decision = ~sp_decision;
       end
     end
     else begin

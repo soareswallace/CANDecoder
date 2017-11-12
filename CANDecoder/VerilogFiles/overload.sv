@@ -1,7 +1,7 @@
 //OVERLOAD ERROR FRAME MAKER
 
-module OE_MAKER(input RX, SP, ERROR, F_OVRLD,
-                output reg [1:0] F_ITMSS,
+module OE_MAKER(input reset, RX, SP, ERROR, F_OVRLD,
+                output reg [1:0] F_ITMSS
                );
 
   reg [8:0]cont;
@@ -17,7 +17,7 @@ module OE_MAKER(input RX, SP, ERROR, F_OVRLD,
     if(reset == 1)begin
       cont <= 9'd0;
       estado_atual <= sts1;
-      F_ITMSS =< 1'b1;
+      F_ITMSS <= 1'b1;
     end
     else begin
       cont <= cont + 9'd1;
@@ -38,7 +38,7 @@ module OE_MAKER(input RX, SP, ERROR, F_OVRLD,
 			end
     end
     sts3: begin		//Superposition
-      if(cont >= 9'd5 and RX == 1'b0)begin
+      if(cont >= 9'd5 && RX == 1'b0)begin
         cont <= 9'd0;
         estado_atual <= sts4;
 			end
@@ -58,11 +58,12 @@ module OE_MAKER(input RX, SP, ERROR, F_OVRLD,
         cont <= 9'd0;
         estado_atual <= sts4;
       end
-      if(RX == 1'b1 and cont >= 9'd6)begin
+      if(RX == 1'b1 && cont >= 9'd6)begin
         cont <= 9'd0;
         estado_atual <= sts1;
         F_ITMSS <= 1'b0;
       end
     end
   endcase
+  end
 endmodule

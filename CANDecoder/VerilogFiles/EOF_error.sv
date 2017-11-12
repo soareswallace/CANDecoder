@@ -1,12 +1,12 @@
 //EOF ERROR BLOCK
 
 module EOF_ERROR(input reset, SP, RX, EOF_Flag,
-                output reg [1:0] EOF_Error,
+                output reg [1:0] EOF_Error
                );
 
 reg [7:0]estado_atual;
-parameter sts1 = 0, sts2 = 1;
-
+parameter sts1 = 0, sts2 = 1, sts3 = 2;
+reg [8:0]cont;
 initial cont = 9'd0;
 initial EOF_Error = 1'b1;
 

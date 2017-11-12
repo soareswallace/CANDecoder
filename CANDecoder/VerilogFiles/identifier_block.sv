@@ -1,7 +1,7 @@
 //IDENTIFIER BLOCK
 
 module IDENTIFIER_BLOCK(input reset, SP, IDF, IDF_EX, IDE, F_IDF,
-                        output reg [28:0] IDTFR,
+                        output reg [28:0] IDTFR
                );
 
   initial IDTFR = 29'd0;		//29 bits 0s
