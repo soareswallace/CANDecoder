@@ -7,8 +7,6 @@ module EOF_Error_Block_TB;
 EOF_Error_Block block (reset, SP, RX, EOF_Flag, EOF_Error);
 
 	initial begin
-		$dumpfile("BSE.vcd");
-		$dumpvars(0, EOF_Error_Block_TB);
 	
 		//TUDO CERTO
 		SP = 0; RX = 0 ; EOF_Flag = 1; reset = 1; # 10;

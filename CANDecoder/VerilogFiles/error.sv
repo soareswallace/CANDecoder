@@ -1,7 +1,7 @@
 //ERROR BLOCK
 
 module ERRO_BLOCK(input reset, SP, STF_E, EOF_E, CRC_E, FRM_E,
-                output reg [1:0] ERROR,
+                output reg [1:0] ERROR
                );
 
 	reg [7:0]estado_atual;
