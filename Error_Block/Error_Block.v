@@ -1,7 +1,7 @@
 module Error_Block(
 	
 	input reset, SP, STF_E, EOF_E, CRC_E, FRM_E,
-	output reg[1:0] ERROR
+	output reg ERROR
 
 );
 
@@ -22,8 +22,18 @@ always@(posedge SP or posedge reset) begin
 		
 		sts2: begin
 			estado_atual <= sts1;
-			ERROR = 1'b0;
 		end
 	endcase
+end
+
+always@(*) begin  //definindo oq fazer nos estados de forma combinacional
+   case(estado_atual)
+		sts1: begin		//WATING FOR ERROR
+			ERROR = 1'b1;
+      end
+      sts2: begin		//ERROR
+         ERROR = 1'b0;
+      end
+   endcase
 end
 endmodule
