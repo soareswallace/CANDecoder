@@ -1,0 +1,4 @@
+module Stuff_Block(
+	input reset, RX, SP, F_STF,
+	output reg sp_decision
+);
