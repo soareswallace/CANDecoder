@@ -5,5 +5,5 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/Verilog/BitStuffErrorBock {C:/Verilog/BitStuffErrorBock/BitStuffErrorBock.v}
+vlog -vlog01compat -work work +incdir+C:/Users/wssj2/Desktop/CANDecoder/BitStuffErrorBock {C:/Users/wssj2/Desktop/CANDecoder/BitStuffErrorBock/BitStuffErrorBock.v}
 

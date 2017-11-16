@@ -6,28 +6,33 @@ module bitStuff_TB;
 
 BitStuffErrorBock block (reset, SP, RX, F_STF, STF_ERR);
 
-	initial begin
-		$dumpfile("BSE.vcd");
-		$dumpvars(0, bitStuff_TB);
+	initial 
+	SP = 0;
 	
-		SP = 0; RX = 0 ; F_STF = 0; reset = 1; # 10;
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; F_STF = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
+	always
+	#3 SP = ~SP;
+
+	initial begin
+	
+		RX = 0 ; F_STF = 0; reset = 1; # 10;
+		RX = 0 ; F_STF = 0; reset = 0; # 10;
+		RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
+		RX = 0 ; F_STF = 0; reset = 0; # 10;
+		RX = 1 ; F_STF = 0; reset = 0; # 10; //esse bit
+		RX = 1 ; F_STF = 0; reset = 0; # 10;
+		RX = 1 ; F_STF = 0; reset = 0; # 10; //esse bit
+		RX = 0 ; F_STF = 0; reset = 0; # 10;
+		RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
+		RX = 0 ; F_STF = 0; reset = 0; # 10;
+		RX = 1 ; F_STF = 0; reset = 0; # 10; //esse bit
+		RX = 1 ; F_STF = 0; reset = 0; # 10;
+		RX = 1 ; F_STF = 0; reset = 0; # 10; //esse bit
+		RX = 0 ; F_STF = 0; reset = 0; # 10;
+		RX = 0 ; F_STF = 0; reset = 0; # 10;
+		RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
+		RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
 		
-		$display("");
+		$stop;
 	
 	end
 endmodule

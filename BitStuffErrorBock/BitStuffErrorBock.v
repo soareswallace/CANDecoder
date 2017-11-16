@@ -14,13 +14,6 @@ output reg STF_ERR);
 	
 	always@(posedge SP or posedge reset) begin
 		i <= i + 9'd1;
-		$display(" ");
-		$display("Always entry %d", i);
-		$display("Sample point %d", SP);
-		$display("Estado %d", estado_atual);
-		$display("Contador %d", cont);
-		$display("Previous bit %d", previous_bit);
-		$display(" ");
 		
 		if(reset == 1) begin
 			estado_atual <= sts1;
@@ -33,12 +26,14 @@ output reg STF_ERR);
 				if(F_STF == 1'b0) begin
 					estado_atual <= sts2;
 					cont <= 9'd0;
+					$display("Estou verificando se há stuff");
 				end
 			end
 			sts2: begin		//stuff area
 				if(F_STF == 1'b1) begin
 					estado_atual <= sts1;
 					cont <= 9'd0;
+					$display("Flag desativada");
 				end
 				else begin
 					if(previous_bit == RX && cont == 4)begin
@@ -50,6 +45,7 @@ output reg STF_ERR);
 					else begin
 						if(previous_bit != RX) begin
 							cont <= 9'd0;
+							$display("Encontrei um bit diferente");
 						end
 						else begin
 							if(previous_bit == RX && cont<4) begin
@@ -59,6 +55,7 @@ output reg STF_ERR);
 					end
 				end
 				previous_bit <= RX;
+				$display("Contador: %d" , cont);
 			end
 		endcase
 	end	
