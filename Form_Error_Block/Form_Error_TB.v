@@ -9,21 +9,21 @@ initial
 SP = 0;
 
 always
-#3 SP = ~SP;
+#6 SP = ~SP;
 
 initial begin
-	RX = 1; reset = 1; RX = 0; F_ACK_D = 1; F_CRC_D = 1; #10;
-	RX = 1; reset = 1; RX = 0; F_ACK_D = 1; F_CRC_D = 1; #10;
-	RX = 0; reset = 1; RX = 0; F_ACK_D = 1; F_CRC_D = 1; #10;
-	RX = 1; reset = 1; RX = 0; F_ACK_D = 1; F_CRC_D = 1; #10;
-	RX = 1; reset = 1; RX = 0; F_ACK_D = 1; F_CRC_D = 1; #10;
-	RX = 1; reset = 1; RX = 0; F_ACK_D = 1; F_CRC_D = 1; #10;
-	RX = 1; reset = 1; RX = 0; F_ACK_D = 1; F_CRC_D = 1; #10;
-	RX = 1; reset = 1; RX = 0; F_ACK_D = 1; F_CRC_D = 1; #10;
-	RX = 1; reset = 1; RX = 0; F_ACK_D = 1; F_CRC_D = 1; #10;
-	RX = 1; reset = 1; RX = 0; F_ACK_D = 1; F_CRC_D = 1; #10;
-	RX = 1; reset = 1; RX = 0; F_ACK_D = 1; F_CRC_D = 1; #10;
-	RX = 1; reset = 1; RX = 0; F_ACK_D = 1; F_CRC_D = 1; #10;
+	reset = 1; RX = 1; F_ACK_D = 0; F_CRC_D = 1; #10;
+	reset = 0; RX = 1; F_ACK_D = 0; F_CRC_D = 1; #10;
+	reset = 0; RX = 1; F_ACK_D = 0; F_CRC_D = 1; #10;
+	reset = 0; RX = 1; F_ACK_D = 0; F_CRC_D = 1; #10;
+	reset = 0; RX = 1; F_ACK_D = 0; F_CRC_D = 1; #10;
+	reset = 0; RX = 1; F_ACK_D = 0; F_CRC_D = 1; #10;
+	reset = 0; RX = 0; F_ACK_D = 0; F_CRC_D = 1; #10;
+	reset = 0; RX = 0; F_ACK_D = 1; F_CRC_D = 0; #10;
+	reset = 0; RX = 1; F_ACK_D = 1; F_CRC_D = 1; #10;
+	reset = 0; RX = 1; F_ACK_D = 0; F_CRC_D = 1; #10;
+	reset = 0; RX = 0; F_ACK_D = 0; F_CRC_D = 0; #10;
+	reset = 0; RX = 1; F_ACK_D = 0; F_CRC_D = 1; #10;
 	
 	$stop;
 	
