@@ -1,5 +1,5 @@
 Analysis & Synthesis report for EOF_Error_Block
-Sat Nov 11 14:55:29 2017
+Thu Nov 16 23:28:03 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Nov 11 14:55:28 2017       ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 16 23:28:03 2017       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; EOF_Error_Block                             ;
 ; Top-level Entity Name           ; EOF_Error_Block                             ;
@@ -151,13 +151,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                           ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
-; EOF_Error_Block.v                ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------+---------+
+; EOF_Error_Block.v                ; yes             ; User Verilog HDL File  ; E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------+
@@ -165,14 +165,14 @@ agreement for further details.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 22                    ;
+; Estimate of Logic utilization (ALMs needed) ; 24                    ;
 ;                                             ;                       ;
-; Combinational ALUT usage for logic          ; 41                    ;
+; Combinational ALUT usage for logic          ; 43                    ;
 ;     -- 7 input functions                    ; 0                     ;
-;     -- 6 input functions                    ; 3                     ;
-;     -- 5 input functions                    ; 0                     ;
-;     -- 4 input functions                    ; 4                     ;
-;     -- <=3 input functions                  ; 34                    ;
+;     -- 6 input functions                    ; 4                     ;
+;     -- 5 input functions                    ; 11                    ;
+;     -- 4 input functions                    ; 2                     ;
+;     -- <=3 input functions                  ; 26                    ;
 ;                                             ;                       ;
 ; Dedicated logic registers                   ; 0                     ;
 ;                                             ;                       ;
@@ -180,10 +180,10 @@ agreement for further details.
 ;                                             ;                       ;
 ; Total DSP Blocks                            ; 0                     ;
 ;                                             ;                       ;
-; Maximum fan-out node                        ; estado_atual.sts2_238 ;
+; Maximum fan-out node                        ; estado_atual.sts2_239 ;
 ; Maximum fan-out                             ; 15                    ;
-; Total fan-out                               ; 132                   ;
-; Average fan-out                             ; 2.49                  ;
+; Total fan-out                               ; 162                   ;
+; Average fan-out                             ; 2.95                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -192,7 +192,7 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name     ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-----------------+--------------+
-; |EOF_Error_Block           ; 41 (41)             ; 0 (0)                     ; 0                 ; 0          ; 6    ; 0            ; |EOF_Error_Block    ; EOF_Error_Block ; work         ;
+; |EOF_Error_Block           ; 43 (43)             ; 0 (0)                     ; 0                 ; 0          ; 6    ; 0            ; |EOF_Error_Block    ; EOF_Error_Block ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -203,18 +203,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
 ; EOF_Error[0]$latch                                  ; Selector11          ; yes                    ;
-; estado_atual.sts2_238                               ; Selector14          ; yes                    ;
-; estado_atual.sts1_253                               ; Selector14          ; yes                    ;
-; estado_atual.sts3_223                               ; Selector14          ; yes                    ;
-; cont[1]                                             ; Selector2           ; yes                    ;
-; cont[2]                                             ; Selector2           ; yes                    ;
 ; cont[3]                                             ; Selector2           ; yes                    ;
 ; cont[4]                                             ; Selector2           ; yes                    ;
 ; cont[5]                                             ; Selector2           ; yes                    ;
 ; cont[6]                                             ; Selector2           ; yes                    ;
 ; cont[7]                                             ; Selector2           ; yes                    ;
 ; cont[8]                                             ; Selector2           ; yes                    ;
+; cont[2]                                             ; Selector2           ; yes                    ;
+; cont[1]                                             ; Selector2           ; yes                    ;
 ; cont[0]                                             ; Selector2           ; yes                    ;
+; estado_atual.sts2_239                               ; Selector13          ; yes                    ;
+; estado_atual.sts1_254                               ; Selector13          ; yes                    ;
+; estado_atual.sts3_224                               ; Selector13          ; yes                    ;
 ; Number of user-specified and inferred latches = 13  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -252,19 +252,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 42                          ;
+; arriav_lcell_comb     ; 44                          ;
 ;     arith             ; 9                           ;
 ;         1 data inputs ; 9                           ;
-;     normal            ; 33                          ;
+;     normal            ; 35                          ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 24                          ;
-;         4 data inputs ; 4                           ;
-;         6 data inputs ; 3                           ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 2                           ;
+;         5 data inputs ; 11                          ;
+;         6 data inputs ; 4                           ;
 ; boundary_port         ; 6                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.60                        ;
-; Average LUT depth     ; 2.86                        ;
+; Max LUT depth         ; 3.80                        ;
+; Average LUT depth     ; 3.01                        ;
 +-----------------------+-----------------------------+
 
 
@@ -273,7 +273,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -283,56 +283,56 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Nov 11 14:54:49 2017
+    Info: Processing started: Thu Nov 16 23:27:58 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EOF_Error_Block -c EOF_Error_Block
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
 Info (12021): Found 1 design units, including 1 entities, in source file eof_error_block.v
-    Info (12023): Found entity 1: EOF_Error_Block File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 3
+    Info (12023): Found entity 1: EOF_Error_Block File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file eof_error_block_tb.v
-    Info (12023): Found entity 1: EOF_Error_Block_TB File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block_TB.v Line: 2
+    Info (12023): Found entity 1: EOF_Error_Block_TB File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block_TB.v Line: 2
 Info (12127): Elaborating entity "EOF_Error_Block" for the top level hierarchy
-Critical Warning (10237): Verilog HDL warning at EOF_Error_Block.v(25): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 25
-Warning (10240): Verilog HDL Always Construct warning at EOF_Error_Block.v(23): inferring latch(es) for variable "estado_atual", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Warning (10240): Verilog HDL Always Construct warning at EOF_Error_Block.v(23): inferring latch(es) for variable "EOF_Error", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Warning (10240): Verilog HDL Always Construct warning at EOF_Error_Block.v(23): inferring latch(es) for variable "cont", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "cont[0]" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "cont[1]" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "cont[2]" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "cont[3]" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "cont[4]" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "cont[5]" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "cont[6]" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "cont[7]" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "cont[8]" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "EOF_Error[0]" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "EOF_Error[1]" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "estado_atual.sts3" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "estado_atual.sts2" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "estado_atual.sts1" at EOF_Error_Block.v(23) File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Warning (13012): Latch EOF_Error[0]$latch has unsafe behavior File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts2_238 File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Warning (13012): Latch estado_atual.sts2_238 has unsafe behavior File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_253 File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Warning (13012): Latch estado_atual.sts1_253 has unsafe behavior File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts2_238 File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Warning (13012): Latch estado_atual.sts3_223 has unsafe behavior File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts2_238 File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (10036): Verilog HDL or VHDL warning at EOF_Error_Block.v(12): object "i" assigned a value but never read File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 12
+Warning (10240): Verilog HDL Always Construct warning at EOF_Error_Block.v(23): inferring latch(es) for variable "estado_atual", which holds its previous value in one or more paths through the always construct File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (10240): Verilog HDL Always Construct warning at EOF_Error_Block.v(23): inferring latch(es) for variable "EOF_Error", which holds its previous value in one or more paths through the always construct File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (10240): Verilog HDL Always Construct warning at EOF_Error_Block.v(23): inferring latch(es) for variable "cont", which holds its previous value in one or more paths through the always construct File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "cont[0]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "cont[1]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "cont[2]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "cont[3]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "cont[4]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "cont[5]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "cont[6]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "cont[7]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "cont[8]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "EOF_Error[0]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "EOF_Error[1]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "estado_atual.sts3" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "estado_atual.sts2" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "estado_atual.sts1" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch EOF_Error[0]$latch has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts2_239 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch estado_atual.sts2_239 has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_254 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch estado_atual.sts1_254 has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts2_239 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch estado_atual.sts3_224 has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts2_239 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "EOF_Error[1]" is stuck at GND File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13410): Pin "EOF_Error[1]" is stuck at GND File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SP" File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v Line: 5
-Info (21057): Implemented 47 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SP" File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 5
+Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 41 logic cells
+    Info (21061): Implemented 43 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 675 megabytes
-    Info: Processing ended: Sat Nov 11 14:55:29 2017
-    Info: Elapsed time: 00:00:40
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Peak virtual memory: 645 megabytes
+    Info: Processing ended: Thu Nov 16 23:28:03 2017
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
 
 

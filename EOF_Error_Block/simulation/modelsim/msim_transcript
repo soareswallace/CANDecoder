@@ -10,295 +10,55 @@
 # Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/EOF_Error_Block {C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v}
+# vlog -vlog01compat -work work +incdir+E:/UFPE/7\ Periodo/Redes\ Automotivas/Projeto\ /CANDecoder/EOF_Error_Block {E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:55:40 on Nov 11,2017
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/EOF_Error_Block" C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v 
+# Start time: 23:28:15 on Nov 16,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block" E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v 
 # -- Compiling module EOF_Error_Block
 # 
 # Top level modules:
 # 	EOF_Error_Block
-# End time: 14:55:40 on Nov 11,2017, Elapsed time: 0:00:00
+# End time: 23:28:15 on Nov 16,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block_TB.v
+vlog -reportprogress 300 -work work {E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block_TB.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:55:51 on Nov 11,2017
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block_TB.v 
+# Start time: 23:28:24 on Nov 16,2017
+# vlog -reportprogress 300 -work work E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block_TB.v 
 # -- Compiling module EOF_Error_Block_TB
 # 
 # Top level modules:
 # 	EOF_Error_Block_TB
-# End time: 14:55:51 on Nov 11,2017, Elapsed time: 0:00:00
+# End time: 23:28:24 on Nov 16,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.EOF_Error_Block_TB
 # vsim work.EOF_Error_Block_TB 
-# Start time: 14:55:59 on Nov 11,2017
+# Start time: 23:28:29 on Nov 16,2017
 # Loading work.EOF_Error_Block_TB
 # Loading work.EOF_Error_Block
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block_TB.v(7): [PCDPC] - Port size (2) does not match connection size (1) for port 'EOF_Error'. The port definition is at: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /EOF_Error_Block_TB/block File: C:/intelFPGA_lite/17.0/EOF_Error_Block/EOF_Error_Block.v
+# ** Warning: (vsim-3015) E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block_TB.v(7): [PCDPC] - Port size (2) does not match connection size (1) for port 'EOF_Error'. The port definition is at: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /EOF_Error_Block_TB/block File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v
 add wave -position end  sim:/EOF_Error_Block_TB/reset
 add wave -position end  sim:/EOF_Error_Block_TB/SP
 add wave -position end  sim:/EOF_Error_Block_TB/RX
 add wave -position end  sim:/EOF_Error_Block_TB/EOF_Flag
 add wave -position end  sim:/EOF_Error_Block_TB/EOF_Error
 run -all
-#  
-# Always entry   0
-# Sample point 0
-# Estado   x
-# Contador   0
-#  
-#  
-# Always entry   1
-# Sample point 1
-# Estado   0
-# Contador   0
-#  
+# Esperando flag ativar
 # Esperando flag ativar
 # Flag ativada
-#  
-# Always entry   2
-# Sample point 1
-# Estado   1
-# Contador   0
-#  
-#  
-# Always entry   3
-# Sample point 1
-# Estado   1
-# Contador   1
-#  
-#  
-# Always entry   4
-# Sample point 1
-# Estado   1
-# Contador   2
-#  
-#  
-# Always entry   5
-# Sample point 1
-# Estado   1
-# Contador   3
-#  
-#  
-# Always entry   6
-# Sample point 1
-# Estado   1
-# Contador   4
-#  
-#  
-# Always entry   7
-# Sample point 1
-# Estado   1
-# Contador   5
-#  
 # Tudo certo
-#  
-# Always entry   8
-# Sample point 1
-# Estado   2
-# Contador   6
-#  
 # Voltando a esperar flag ativar
-#  
-# Always entry   9
-# Sample point 1
-# Estado   0
-# Contador   6
-#  
 # Esperando flag ativar
-# Flag ativada
-#  
-# Always entry  10
-# Sample point 1
-# Estado   1
-# Contador   0
-#  
-#  
-# Always entry  11
-# Sample point 1
-# Estado   1
-# Contador   1
-#  
-#  
-# Always entry  12
-# Sample point 1
-# Estado   1
-# Contador   2
-#  
-# Erro encontrado
-#  
-# Always entry  13
-# Sample point 1
-# Estado   0
-# Contador   0
-#  
 # Esperando flag ativar
-# Flag ativada
-#  
-# Always entry  14
-# Sample point 1
-# Estado   1
-# Contador   0
-#  
-#  
-# Always entry  15
-# Sample point 1
-# Estado   1
-# Contador   1
-#  
-#  
-# Always entry  16
-# Sample point 1
-# Estado   1
-# Contador   2
-#  
-#  
-# Always entry  17
-# Sample point 1
-# Estado   1
-# Contador   3
-#  
-#  
-# Always entry  18
-# Sample point 1
-# Estado   1
-# Contador   4
-#  
-#  
-# Always entry  19
-# Sample point 1
-# Estado   1
-# Contador   5
-#  
-# Tudo certo
-# Erro encontrado
-#  
-# Always entry  20
-# Sample point 1
-# Estado   0
-# Contador   0
-#  
 # Esperando flag ativar
-# Flag ativada
-#  
-# Always entry  21
-# Sample point 1
-# Estado   1
-# Contador   0
-#  
-#  
-# Always entry  22
-# Sample point 1
-# Estado   1
-# Contador   1
-#  
-# Erro encontrado
-#  
-# Always entry  23
-# Sample point 1
-# Estado   0
-# Contador   0
-#  
 # Esperando flag ativar
-# Flag ativada
-# Erro encontrado
-#  
-# Always entry  24
-# Sample point 1
-# Estado   0
-# Contador   0
-#  
 # Esperando flag ativar
-# Flag ativada
-#  
-# Always entry  25
-# Sample point 1
-# Estado   1
-# Contador   0
-#  
-#  
-# Always entry  26
-# Sample point 1
-# Estado   1
-# Contador   1
-#  
-# Erro encontrado
-#  
-# Always entry  27
-# Sample point 1
-# Estado   0
-# Contador   0
-#  
 # Esperando flag ativar
-# Flag ativada
-#  
-# Always entry  28
-# Sample point 1
-# Estado   1
-# Contador   0
-#  
-#  
-# Always entry  29
-# Sample point 1
-# Estado   1
-# Contador   1
-#  
-#  
-# Always entry  30
-# Sample point 1
-# Estado   1
-# Contador   2
-#  
-#  
-# Always entry  31
-# Sample point 1
-# Estado   1
-# Contador   3
-#  
-#  
-# Always entry  32
-# Sample point 1
-# Estado   1
-# Contador   4
-#  
-#  
-# Always entry  33
-# Sample point 1
-# Estado   1
-# Contador   5
-#  
-# Tudo certo
-#  
-# Always entry  34
-# Sample point 1
-# Estado   2
-# Contador   6
-#  
-# Voltando a esperar flag ativar
-#  
-# Always entry  35
-# Sample point 1
-# Estado   0
-# Contador   6
-#  
 # Esperando flag ativar
-# Flag ativada
-#  
-# Always entry  36
-# Sample point 1
-# Estado   1
-# Contador   0
-#  
-#  
-# Always entry  37
-# Sample point 1
-# Estado   1
-# Contador   1
-#  
-# Erro encontrado
-# 
-# End time: 14:59:17 on Nov 11,2017, Elapsed time: 0:03:18
+# Esperando flag ativar
+# ** Note: $stop    : E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block_TB.v(29)
+#    Time: 200 ps  Iteration: 0  Instance: /EOF_Error_Block_TB
+# Break in Module EOF_Error_Block_TB at E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block_TB.v line 29
+# End time: 23:33:52 on Nov 16,2017, Elapsed time: 0:05:23
 # Errors: 0, Warnings: 1

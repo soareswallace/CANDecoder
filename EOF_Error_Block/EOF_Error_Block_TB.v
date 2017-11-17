@@ -6,95 +6,27 @@ module EOF_Error_Block_TB;
 
 EOF_Error_Block block (reset, SP, RX, EOF_Flag, EOF_Error);
 
+initial 
+SP = 0;
+
+always
+#6 SP = ~SP;
+
 	initial begin
 	
 		//TUDO CERTO
-		SP = 0; RX = 0 ; EOF_Flag = 1; reset = 1; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 1; reset = 0; # 10;
-		SP = 1; RX = 0 ; EOF_Flag = 1; reset = 0; # 10; //esse bit
+		RX = 0 ; EOF_Flag = 1; reset = 1; # 10;
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 10;
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 10;
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 10;
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 10;
+		RX = 1 ; EOF_Flag = 1; reset = 0; # 10; //esse bit
 		
-	
-		//BIT DOMINANTE NO EOF
-		SP = 0; RX = 0 ; EOF_Flag = 1; reset = 0; # 10; 
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 0 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		
-		//BIT DOMINANTE NO ULTIMO BIT DO EOF
-		SP = 0; RX = 0 ; EOF_Flag = 1; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 0 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 0 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		
-		//BIT DOMINANTE NO PRIMEIRO BIT DO EOF
-		SP = 0; RX = 0 ; EOF_Flag = 1; reset = 0; # 10;
-		SP = 1; RX = 0 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 0 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		
-		//TUDO CERTO AGAIN
-		SP = 0; RX = 0 ; EOF_Flag = 1; reset = 0; # 10; 
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 0; reset = 0; # 10;
-		SP = 1; RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		SP = 0; RX = 0 ; EOF_Flag = 1; reset = 0; # 10;
-		SP = 1; RX = 0 ; EOF_Flag = 1; reset = 0; # 10; //esse bit
-		
-		
-		$display("");
+		#100 $stop;
 	
 	end
 endmodule

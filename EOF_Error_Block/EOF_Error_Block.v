@@ -21,16 +21,6 @@ initial cont = 9'd0;
 initial EOF_Error = 1'b1;
 
 always@(posedge SP or posedge reset)begin
-   
-		i <= i + 9'd1;
-		$display(" ");
-		$display("Always entry %d", i);
-		$display("Sample point %d", SP);
-		$display("Estado %d", estado_atual);
-		$display("Contador %d", cont);
-		$display(" ");
-   
-	
 	if (reset) begin
         estado_atual <= sts1;
         EOF_Error <= 1'b1;
@@ -56,10 +46,10 @@ always@(posedge SP or posedge reset)begin
       sts2: begin  	//EOF Area SEGUNDO BIT
 			if(cont == 5) begin
 				$display("Tudo certo");
+				cont <= 9'd0;
 				estado_atual <= sts3;
-            cont <= 9'd0;
 			end
-			if(RX == 0)begin //EOF Error found
+			if(RX == 0 && cont < 5)begin //EOF Error found
 				$display("Erro encontrado");
 				EOF_Error <= 1'b0;
             cont <= 9'd0;
@@ -70,8 +60,8 @@ always@(posedge SP or posedge reset)begin
 			end
       end
       sts3: begin //EOF LAST BIT
-			estado_atual <= sts1;
 			$display("Voltando a esperar flag ativar");
+			estado_atual <= sts1;
       end
    endcase
 end
