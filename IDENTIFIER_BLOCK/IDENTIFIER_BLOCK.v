@@ -6,7 +6,7 @@ module IDENTIFIER_BLOCK(
 
 initial IDTFR = 29'd0;
 
-always@(posedge SP or posedge reset) begin
+always@(posedge SP) begin
 	if(reset == 1) begin
 		IDTFR = 29'd0;
 	end
