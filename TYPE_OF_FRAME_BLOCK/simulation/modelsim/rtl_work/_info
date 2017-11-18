@@ -1,0 +1,55 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/TYPE_OF_FRAME_BLOCK/simulation/modelsim
+vTYPE_OF_FRAME_BLOCK
+!s110 1511037713
+!i10b 1
+!s100 A9RT;iB9a`NTo4=FQW8aX2
+I[[LOzkenQ`Ta3e_[H>O8S2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1511037116
+8E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/TYPE_OF_FRAME_BLOCK/TYPE_OF_FRAME_BLOCK.v
+FE:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/TYPE_OF_FRAME_BLOCK/TYPE_OF_FRAME_BLOCK.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1511037713.000000
+!s107 E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/TYPE_OF_FRAME_BLOCK/TYPE_OF_FRAME_BLOCK.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/TYPE_OF_FRAME_BLOCK|E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/TYPE_OF_FRAME_BLOCK/TYPE_OF_FRAME_BLOCK.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work {+incdir+E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/TYPE_OF_FRAME_BLOCK}
+Z3 tCvgOpt 0
+n@t@y@p@e_@o@f_@f@r@a@m@e_@b@l@o@c@k
+vTYPE_TB
+!s110 1511037728
+!i10b 1
+!s100 WI;gJkEkiY[KlYDfg7M<:3
+I4og^`8gQ@X163KP<OhL?K3
+R1
+R0
+w1511037675
+8E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/TYPE_OF_FRAME_BLOCK/TYPE_TB.v
+FE:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/TYPE_OF_FRAME_BLOCK/TYPE_TB.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1511037728.000000
+!s107 E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/TYPE_OF_FRAME_BLOCK/TYPE_TB.v|
+!s90 -reportprogress|300|-work|work|E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/TYPE_OF_FRAME_BLOCK/TYPE_TB.v|
+!i113 1
+o-work work
+R3
+n@t@y@p@e_@t@b
