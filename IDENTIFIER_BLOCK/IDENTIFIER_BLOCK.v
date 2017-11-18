@@ -1,5 +1,8 @@
 module IDENTIFIER_BLOCK(
-	input reset, SP, IDF, IDF_EX, IDE, F_IDF,
+	input reset, SP, 
+	input [10:0] IDF, 
+	input [17:0] IDF_EX, 
+	input IDE, F_IDF,
 	output reg [28:0] IDTFR
 	
 );

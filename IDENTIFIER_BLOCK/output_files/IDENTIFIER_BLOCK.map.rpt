@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IDENTIFIER_BLOCK
-Sun Nov 12 22:50:39 2017
+Sat Nov 18 18:16:16 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -12,8 +12,8 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. Registers Removed During Synthesis
-  8. General Register Statistics
+  7. General Register Statistics
+  8. Multiplexer Restructuring Statistics (Restructuring Performed)
   9. Post-Synthesis Netlist Statistics for Top Partition
  10. Elapsed Time Per Partition
  11. Analysis & Synthesis Messages
@@ -44,14 +44,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 12 22:50:39 2017       ;
+; Analysis & Synthesis Status     ; Successful - Sat Nov 18 18:16:16 2017       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; IDENTIFIER_BLOCK                            ;
 ; Top-level Entity Name           ; IDENTIFIER_BLOCK                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2                                           ;
-; Total pins                      ; 35                                          ;
+; Total registers                 ; 29                                          ;
+; Total pins                      ; 62                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -151,40 +151,40 @@ agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                             ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                               ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
-; IDENTIFIER_BLOCK.v               ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
+; IDENTIFIER_BLOCK.v               ; yes             ; User Verilog HDL File  ; E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimate of Logic utilization (ALMs needed) ; 1        ;
-;                                             ;          ;
-; Combinational ALUT usage for logic          ; 1        ;
-;     -- 7 input functions                    ; 0        ;
-;     -- 6 input functions                    ; 0        ;
-;     -- 5 input functions                    ; 0        ;
-;     -- 4 input functions                    ; 0        ;
-;     -- <=3 input functions                  ; 1        ;
-;                                             ;          ;
-; Dedicated logic registers                   ; 2        ;
-;                                             ;          ;
-; I/O pins                                    ; 35       ;
-;                                             ;          ;
-; Total DSP Blocks                            ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; SP~input ;
-; Maximum fan-out                             ; 2        ;
-; Total fan-out                               ; 47       ;
-; Average fan-out                             ; 0.64     ;
-+---------------------------------------------+----------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 15         ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 2          ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 0          ;
+;     -- 5 input functions                    ; 0          ;
+;     -- 4 input functions                    ; 0          ;
+;     -- <=3 input functions                  ; 2          ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 29         ;
+;                                             ;            ;
+; I/O pins                                    ; 62         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; IDTFR[0]~0 ;
+; Maximum fan-out                             ; 29         ;
+; Total fan-out                               ; 211        ;
+; Average fan-out                             ; 1.36       ;
++---------------------------------------------+------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -192,45 +192,9 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name      ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
-; |IDENTIFIER_BLOCK          ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 35   ; 0            ; |IDENTIFIER_BLOCK   ; IDENTIFIER_BLOCK ; work         ;
+; |IDENTIFIER_BLOCK          ; 2 (2)               ; 29 (29)                   ; 0                 ; 0          ; 62   ; 0            ; |IDENTIFIER_BLOCK   ; IDENTIFIER_BLOCK ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; IDTFR[28]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[27]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[26]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[25]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[24]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[23]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[22]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[21]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[20]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[19]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[18]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[17]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[16]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[15]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[14]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[13]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[12]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[10]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; IDTFR[9]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; IDTFR[8]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; IDTFR[7]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; IDTFR[6]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; IDTFR[5]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; IDTFR[4]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; IDTFR[3]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; IDTFR[2]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; IDTFR[1]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 27 ;                                        ;
-+----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -238,14 +202,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 29    ;
+; Number of registers using Synchronous Clear  ; 29    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2     ;
+; Number of registers using Clock Enable       ; 29    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |IDENTIFIER_BLOCK|IDTFR[0]~reg0  ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |IDENTIFIER_BLOCK|IDTFR[11]~reg0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
 
 +-----------------------------------------------------+
@@ -253,16 +227,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 2                           ;
-;     ENA CLR           ; 2                           ;
+; arriav_ff             ; 29                          ;
+;     ENA SCLR          ; 29                          ;
 ; arriav_lcell_comb     ; 2                           ;
 ;     normal            ; 2                           ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
-; boundary_port         ; 35                          ;
+;         2 data inputs ; 2                           ;
+; boundary_port         ; 62                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.30                        ;
+; Average LUT depth     ; 0.08                        ;
 +-----------------------+-----------------------------+
 
 
@@ -281,59 +254,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Nov 12 22:49:56 2017
+    Info: Processing started: Sat Nov 18 18:16:10 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IDENTIFIER_BLOCK -c IDENTIFIER_BLOCK
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
 Info (12021): Found 1 design units, including 1 entities, in source file identifier_block.v
-    Info (12023): Found entity 1: IDENTIFIER_BLOCK File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 1
+    Info (12023): Found entity 1: IDENTIFIER_BLOCK File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file idf_tb.v
+    Info (12023): Found entity 1: IDF_TB File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/IDENTIFIER_BLOCK/IDF_TB.v Line: 1
 Info (12127): Elaborating entity "IDENTIFIER_BLOCK" for the top level hierarchy
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "IDTFR[1]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[2]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[3]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[4]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[5]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[6]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[7]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[8]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[9]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[10]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[12]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[13]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[14]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[15]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[16]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[17]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[18]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[19]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[20]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[21]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[22]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[23]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[24]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[25]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[26]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[27]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
-    Warning (13410): Pin "IDTFR[28]" is stuck at GND File: C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/IDENTIFIER_BLOCK.v Line: 13
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/output_files/IDENTIFIER_BLOCK.map.smsg
+Info (144001): Generated suppressed messages file E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/IDENTIFIER_BLOCK/output_files/IDENTIFIER_BLOCK.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
+Info (21057): Implemented 93 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 33 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 2 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 682 megabytes
-    Info: Processing ended: Sun Nov 12 22:50:39 2017
-    Info: Elapsed time: 00:00:43
-    Info: Total CPU time (on all processors): 00:00:41
+    Info (21061): Implemented 31 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 645 megabytes
+    Info: Processing ended: Sat Nov 18 18:16:16 2017
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/intelFPGA_lite/17.0/IDENTIFIER_BLOCK/output_files/IDENTIFIER_BLOCK.map.smsg.
+The suppressed messages can be found in E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/IDENTIFIER_BLOCK/output_files/IDENTIFIER_BLOCK.map.smsg.
 
 
