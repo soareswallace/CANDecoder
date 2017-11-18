@@ -12,28 +12,28 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/Error_Block {C:/intelFPGA_lite/17.0/Error_Block/Error_Block.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:13:03 on Nov 12,2017
+# Start time: 14:02:41 on Nov 18,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/Error_Block" C:/intelFPGA_lite/17.0/Error_Block/Error_Block.v 
 # -- Compiling module Error_Block
 # 
 # Top level modules:
 # 	Error_Block
-# End time: 21:13:03 on Nov 12,2017, Elapsed time: 0:00:00
+# End time: 14:02:41 on Nov 18,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vlog -reportprogress 300 -work work C:/intelFPGA_lite/17.0/Error_Block/Error_Block_TB.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:13:50 on Nov 12,2017
+# Start time: 14:02:55 on Nov 18,2017
 # vlog -reportprogress 300 -work work C:/intelFPGA_lite/17.0/Error_Block/Error_Block_TB.v 
 # -- Compiling module Error_Block_TB
 # 
 # Top level modules:
 # 	Error_Block_TB
-# End time: 21:13:50 on Nov 12,2017, Elapsed time: 0:00:00
+# End time: 14:02:55 on Nov 18,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.Error_Block_TB
 # vsim work.Error_Block_TB 
-# Start time: 21:13:54 on Nov 12,2017
+# Start time: 14:02:58 on Nov 18,2017
 # Loading work.Error_Block_TB
 # Loading work.Error_Block
 add wave -position end  sim:/Error_Block_TB/reset
@@ -43,6 +43,28 @@ add wave -position end  sim:/Error_Block_TB/EOF_E
 add wave -position end  sim:/Error_Block_TB/CRC_E
 add wave -position end  sim:/Error_Block_TB/FRM_E
 add wave -position end  sim:/Error_Block_TB/ERROR
+add wave -position end  sim:/Error_Block_TB/saida
 run -all
-# End time: 21:22:40 on Nov 12,2017, Elapsed time: 0:08:46
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# Estou verificando erro
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/Error_Block/Error_Block_TB.v(32)
+#    Time: 36 ps  Iteration: 0  Instance: /Error_Block_TB
+# Break in Module Error_Block_TB at C:/intelFPGA_lite/17.0/Error_Block/Error_Block_TB.v line 32
+# End time: 14:10:48 on Nov 18,2017, Elapsed time: 0:07:50
 # Errors: 0, Warnings: 0

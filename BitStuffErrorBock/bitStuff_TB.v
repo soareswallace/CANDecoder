@@ -18,7 +18,7 @@ BitStuffErrorBock block (reset, SP, RX, F_STF, STF_ERR);
 		RX = 0 ; F_STF = 0; reset = 0; # 10;
 		RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
 		RX = 0 ; F_STF = 0; reset = 0; # 10;
-		RX = 1 ; F_STF = 0; reset = 0; # 10; //esse bit
+		RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
 		RX = 1 ; F_STF = 0; reset = 0; # 10;
 		RX = 1 ; F_STF = 0; reset = 0; # 10; //esse bit
 		RX = 0 ; F_STF = 0; reset = 0; # 10;

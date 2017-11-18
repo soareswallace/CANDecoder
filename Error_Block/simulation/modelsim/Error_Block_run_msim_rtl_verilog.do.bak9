@@ -5,5 +5,5 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+E:/UFPE/7\ Periodo/Redes\ Automotivas/Projeto\ /CANDecoder/Error_Block {E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Error_Block/Error_Block.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/Error_Block {C:/intelFPGA_lite/17.0/Error_Block/Error_Block.v}
 

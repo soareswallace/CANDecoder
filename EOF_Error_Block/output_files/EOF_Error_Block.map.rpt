@@ -1,5 +1,5 @@
 Analysis & Synthesis report for EOF_Error_Block
-Fri Nov 17 23:56:37 2017
+Sat Nov 18 12:41:29 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Nov 17 23:56:37 2017       ;
+; Analysis & Synthesis Status     ; Successful - Sat Nov 18 12:41:29 2017       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; EOF_Error_Block                             ;
 ; Top-level Entity Name           ; EOF_Error_Block                             ;
@@ -279,7 +279,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -289,7 +289,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Nov 17 23:56:32 2017
+    Info: Processing started: Sat Nov 18 12:41:23 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EOF_Error_Block -c EOF_Error_Block
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
@@ -346,9 +346,9 @@ Info (21057): Implemented 41 device resources after synthesis - the final resour
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 36 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 641 megabytes
-    Info: Processing ended: Fri Nov 17 23:56:37 2017
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 643 megabytes
+    Info: Processing ended: Sat Nov 18 12:41:29 2017
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 

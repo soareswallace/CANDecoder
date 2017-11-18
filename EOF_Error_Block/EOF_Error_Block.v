@@ -20,7 +20,7 @@ parameter sts3 = 2;
 initial cont = 9'd0;
 initial EOF_Error = 1'b1;
 
-always@(posedge SP or posedge reset)begin
+always@(posedge SP)begin
 
 	$display(" ");
 	$display("Entrei no always");
@@ -38,7 +38,7 @@ always@(posedge SP or posedge reset)begin
 			$display("Esperando flag ativar");
 			if(EOF_Flag == 1'b0)begin  //Se a FLAG estiver em 0, já estamos no primeiro bit do EOF!!!
 				if(RX == 0)begin 		//EOF Error found
-					$display("Erro encontrado");
+					$display("Erro encontrado no EOF");
 					EOF_Error <= 1'b0;
 					cont <= 9'd0;
 					estado_atual <= sts1;
@@ -51,6 +51,10 @@ always@(posedge SP or posedge reset)begin
 			end
       end
       sts2: begin  	//EOF Area SEGUNDO BIT\
+			if(EOF_Flag == 1'b1) begin
+				$display("Flag Desativada");
+				estado_atual <= sts1;
+			end
 			$display("Estou verificando o EOF");
 			if(cont == 7) begin
 				if(RX == 0) begin

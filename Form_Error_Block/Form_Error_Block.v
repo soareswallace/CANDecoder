@@ -5,7 +5,7 @@ module Form_Error_Block(
 
 initial FORM_Error = 1'b1;
 
-always@(posedge SP or posedge reset) begin
+always@(posedge SP) begin
 	
 	if(reset) begin
 		FORM_Error <= 1'b1;

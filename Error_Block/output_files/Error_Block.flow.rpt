@@ -1,5 +1,5 @@
 Flow report for Error_Block
-Sun Nov 12 21:12:35 2017
+Sat Nov 18 14:01:54 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun Nov 12 21:12:35 2017       ;
+; Flow Status                     ; Successful - Sat Nov 18 14:01:54 2017       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Error_Block                                 ;
 ; Top-level Entity Name           ; Error_Block                                 ;
@@ -49,8 +49,8 @@ agreement for further details.
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 7                                           ;
+; Total registers                 ; 1                                           ;
+; Total pins                      ; 8                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/12/2017 21:11:57 ;
+; Start date & time ; 11/18/2017 14:01:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Error_Block         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 8796757030621.151052831702468          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 8796757030621.151102087102432          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
@@ -96,8 +96,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:38     ; 1.0                     ; 661 MB              ; 00:00:37                           ;
-; Total                ; 00:00:38     ; --                      ; --                  ; 00:00:37                           ;
+; Analysis & Synthesis ; 00:00:43     ; 1.0                     ; 656 MB              ; 00:00:40                           ;
+; Total                ; 00:00:43     ; --                      ; --                  ; 00:00:40                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
