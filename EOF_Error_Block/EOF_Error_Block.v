@@ -3,7 +3,7 @@
 module EOF_Error_Block(
 	
 	input reset, SP, RX, EOF_Flag,
-   output reg [1:0] EOF_Error
+   output reg EOF_Error
    
 	);
 
@@ -21,6 +21,11 @@ initial cont = 9'd0;
 initial EOF_Error = 1'b1;
 
 always@(posedge SP or posedge reset)begin
+
+	$display(" ");
+	$display("Entrei no always");
+	$display(" ");
+      
 	if (reset) begin
         estado_atual <= sts1;
         EOF_Error <= 1'b1;
@@ -28,28 +33,38 @@ always@(posedge SP or posedge reset)begin
    end
 	
   	case(estado_atual)
-      sts1: begin			//Waiting for EOF area
+		sts1: begin			//Waiting for EOF area
 			EOF_Error <= 1'b1; 
 			$display("Esperando flag ativar");
 			if(EOF_Flag == 1'b0)begin  //Se a FLAG estiver em 0, já estamos no primeiro bit do EOF!!!
-				$display("Flag ativada");
-				estado_atual <= sts2;
-				cont <= 9'd0;
 				if(RX == 0)begin 		//EOF Error found
 					$display("Erro encontrado");
 					EOF_Error <= 1'b0;
 					cont <= 9'd0;
 					estado_atual <= sts1;
           	end
+				else begin
+					$display("Flag ativada");
+					estado_atual <= sts2;
+					cont <= 9'd2;
+				end
 			end
       end
-      sts2: begin  	//EOF Area SEGUNDO BIT
-			if(cont == 5) begin
-				$display("Tudo certo");
-				cont <= 9'd0;
-				estado_atual <= sts3;
+      sts2: begin  	//EOF Area SEGUNDO BIT\
+			$display("Estou verificando o EOF");
+			if(cont == 7) begin
+				if(RX == 0) begin
+					$display("Interframe Spacing");
+					cont <= 9'd0;
+					estado_atual <= sts1;
+				end
+				else begin
+					$display("Tudo certo na forma do EOF");
+					cont <= 9'd0;
+					estado_atual <= sts1;
+				end
 			end
-			if(RX == 0 && cont < 5)begin //EOF Error found
+			if(RX == 0 && cont < 7)begin //EOF Error found
 				$display("Erro encontrado");
 				EOF_Error <= 1'b0;
             cont <= 9'd0;
@@ -58,10 +73,6 @@ always@(posedge SP or posedge reset)begin
 			else begin
 				cont <= cont + 9'd1;
 			end
-      end
-      sts3: begin //EOF LAST BIT
-			$display("Voltando a esperar flag ativar");
-			estado_atual <= sts1;
       end
    endcase
 end

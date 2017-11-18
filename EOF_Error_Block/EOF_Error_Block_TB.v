@@ -10,21 +10,28 @@ initial
 SP = 0;
 
 always
-#6 SP = ~SP;
+#1 SP = ~SP;
 
 	initial begin
 	
 		//TUDO CERTO
-		RX = 0 ; EOF_Flag = 1; reset = 1; # 10;
-		RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		RX = 1 ; EOF_Flag = 0; reset = 0; # 10;
-		RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		RX = 1 ; EOF_Flag = 0; reset = 0; # 10;
-		RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		RX = 1 ; EOF_Flag = 0; reset = 0; # 10;
-		RX = 1 ; EOF_Flag = 0; reset = 0; # 10; //esse bit
-		RX = 1 ; EOF_Flag = 0; reset = 0; # 10;
-		RX = 1 ; EOF_Flag = 1; reset = 0; # 10; //esse bit
+		RX = 0 ; EOF_Flag = 1; reset = 1; # 3;
+		RX = 0 ; EOF_Flag = 1; reset = 1; # 3;
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 3; //esse bit
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 3;
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 3; //esse bit
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 3;
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 3; //esse bit
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 3;
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 3; //esse bit
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 3; //esse bit
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 3; //esse bit
+		RX = 0 ; EOF_Flag = 0; reset = 0; # 3;
+		RX = 0 ; EOF_Flag = 1; reset = 0; # 3; //esse bit
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 3; //esse bit
+		RX = 1 ; EOF_Flag = 0; reset = 0; # 3; //esse bit
+		RX = 0 ; EOF_Flag = 0; reset = 0; # 3; //esse bit
+		RX = 1 ; EOF_Flag = 1; reset = 0; # 3; //esse bit
 		
 		#100 $stop;
 	

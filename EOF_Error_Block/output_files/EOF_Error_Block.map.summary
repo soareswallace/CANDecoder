@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Nov 16 23:28:03 2017
+Analysis & Synthesis Status : Successful - Fri Nov 17 23:56:37 2017
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : EOF_Error_Block
 Top-level Entity Name : EOF_Error_Block
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 6
+Total pins : 5
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

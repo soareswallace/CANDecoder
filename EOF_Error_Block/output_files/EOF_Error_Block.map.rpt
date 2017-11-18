@@ -1,5 +1,5 @@
 Analysis & Synthesis report for EOF_Error_Block
-Thu Nov 16 23:28:03 2017
+Fri Nov 17 23:56:37 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -14,10 +14,11 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Utilization by Entity
   7. User-Specified and Inferred Latches
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |EOF_Error_Block
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |EOF_Error_Block
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,14 +45,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 16 23:28:03 2017       ;
+; Analysis & Synthesis Status     ; Successful - Fri Nov 17 23:56:37 2017       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; EOF_Error_Block                             ;
 ; Top-level Entity Name           ; EOF_Error_Block                             ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 6                                           ;
+; Total pins                      ; 5                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -165,25 +166,25 @@ agreement for further details.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 24                    ;
+; Estimate of Logic utilization (ALMs needed) ; 20                    ;
 ;                                             ;                       ;
-; Combinational ALUT usage for logic          ; 43                    ;
+; Combinational ALUT usage for logic          ; 36                    ;
 ;     -- 7 input functions                    ; 0                     ;
-;     -- 6 input functions                    ; 4                     ;
-;     -- 5 input functions                    ; 11                    ;
-;     -- 4 input functions                    ; 2                     ;
-;     -- <=3 input functions                  ; 26                    ;
+;     -- 6 input functions                    ; 3                     ;
+;     -- 5 input functions                    ; 10                    ;
+;     -- 4 input functions                    ; 0                     ;
+;     -- <=3 input functions                  ; 23                    ;
 ;                                             ;                       ;
 ; Dedicated logic registers                   ; 0                     ;
 ;                                             ;                       ;
-; I/O pins                                    ; 6                     ;
+; I/O pins                                    ; 5                     ;
 ;                                             ;                       ;
 ; Total DSP Blocks                            ; 0                     ;
 ;                                             ;                       ;
-; Maximum fan-out node                        ; estado_atual.sts2_239 ;
+; Maximum fan-out node                        ; estado_atual.sts1_218 ;
 ; Maximum fan-out                             ; 15                    ;
-; Total fan-out                               ; 162                   ;
-; Average fan-out                             ; 2.95                  ;
+; Total fan-out                               ; 133                   ;
+; Average fan-out                             ; 2.89                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -192,7 +193,7 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name     ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-----------------+--------------+
-; |EOF_Error_Block           ; 43 (43)             ; 0 (0)                     ; 0                 ; 0          ; 6    ; 0            ; |EOF_Error_Block    ; EOF_Error_Block ; work         ;
+; |EOF_Error_Block           ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 5    ; 0            ; |EOF_Error_Block    ; EOF_Error_Block ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -202,20 +203,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; EOF_Error[0]$latch                                  ; Selector11          ; yes                    ;
-; cont[3]                                             ; Selector2           ; yes                    ;
-; cont[4]                                             ; Selector2           ; yes                    ;
-; cont[5]                                             ; Selector2           ; yes                    ;
-; cont[6]                                             ; Selector2           ; yes                    ;
-; cont[7]                                             ; Selector2           ; yes                    ;
-; cont[8]                                             ; Selector2           ; yes                    ;
-; cont[2]                                             ; Selector2           ; yes                    ;
-; cont[1]                                             ; Selector2           ; yes                    ;
-; cont[0]                                             ; Selector2           ; yes                    ;
-; estado_atual.sts2_239                               ; Selector13          ; yes                    ;
-; estado_atual.sts1_254                               ; Selector13          ; yes                    ;
-; estado_atual.sts3_224                               ; Selector13          ; yes                    ;
-; Number of user-specified and inferred latches = 13  ;                     ;                        ;
+; EOF_Error$latch                                     ; EOF_Error           ; yes                    ;
+; cont[3]                                             ; cont[1]             ; yes                    ;
+; cont[4]                                             ; cont[1]             ; yes                    ;
+; cont[5]                                             ; cont[1]             ; yes                    ;
+; cont[6]                                             ; cont[1]             ; yes                    ;
+; cont[7]                                             ; cont[1]             ; yes                    ;
+; cont[8]                                             ; cont[1]             ; yes                    ;
+; cont[1]                                             ; cont[1]             ; yes                    ;
+; cont[2]                                             ; cont[1]             ; yes                    ;
+; cont[0]                                             ; cont[1]             ; yes                    ;
+; estado_atual.sts1_218                               ; estado_atual.sts1   ; yes                    ;
+; Number of user-specified and inferred latches = 11  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -235,6 +234,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |EOF_Error_Block|cont[8]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
 +---------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |EOF_Error_Block ;
 +----------------+-------+--------------------------------------------------------+
@@ -252,19 +260,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 44                          ;
+; arriav_lcell_comb     ; 36                          ;
 ;     arith             ; 9                           ;
 ;         1 data inputs ; 9                           ;
-;     normal            ; 35                          ;
-;         0 data inputs ; 1                           ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 2                           ;
-;         5 data inputs ; 11                          ;
-;         6 data inputs ; 4                           ;
-; boundary_port         ; 6                           ;
+;     normal            ; 27                          ;
+;         3 data inputs ; 14                          ;
+;         5 data inputs ; 10                          ;
+;         6 data inputs ; 3                           ;
+; boundary_port         ; 5                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.80                        ;
-; Average LUT depth     ; 3.01                        ;
+; Average LUT depth     ; 3.03                        ;
 +-----------------------+-----------------------------+
 
 
@@ -283,7 +289,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Nov 16 23:27:58 2017
+    Info: Processing started: Fri Nov 17 23:56:32 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EOF_Error_Block -c EOF_Error_Block
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
@@ -305,33 +311,43 @@ Info (10041): Inferred latch for "cont[5]" at EOF_Error_Block.v(23) File: E:/UFP
 Info (10041): Inferred latch for "cont[6]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
 Info (10041): Inferred latch for "cont[7]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
 Info (10041): Inferred latch for "cont[8]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "EOF_Error[0]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "EOF_Error[1]" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Info (10041): Inferred latch for "estado_atual.sts3" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Info (10041): Inferred latch for "EOF_Error" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
 Info (10041): Inferred latch for "estado_atual.sts2" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
 Info (10041): Inferred latch for "estado_atual.sts1" at EOF_Error_Block.v(23) File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Warning (13012): Latch EOF_Error[0]$latch has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts2_239 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Warning (13012): Latch estado_atual.sts2_239 has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_254 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Warning (13012): Latch estado_atual.sts1_254 has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts2_239 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Warning (13012): Latch estado_atual.sts3_224 has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts2_239 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "EOF_Error[1]" is stuck at GND File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch EOF_Error$latch has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RX File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 5
+Warning (13012): Latch cont[3] has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_218 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch cont[4] has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_218 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch cont[5] has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_218 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch cont[6] has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_218 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch cont[7] has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_218 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch cont[8] has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_218 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch cont[1] has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_218 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch cont[2] has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_218 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch cont[0] has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_218 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+Warning (13012): Latch estado_atual.sts1_218 has unsafe behavior File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.sts1_218 File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SP" File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/EOF_Error_Block/EOF_Error_Block.v Line: 5
-Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 41 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 43 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 645 megabytes
-    Info: Processing ended: Thu Nov 16 23:28:03 2017
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 36 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 641 megabytes
+    Info: Processing ended: Fri Nov 17 23:56:37 2017
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:03
 
