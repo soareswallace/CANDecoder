@@ -1,0 +1,181 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Stuff_Block_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/UFPE/7\ Periodo/Redes\ Automotivas/Projeto\ /CANDecoder/Stuff_Block {E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/Stuff_Block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:02:10 on Nov 19,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block" E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/Stuff_Block.v 
+# -- Compiling module Stuff_Block
+# 
+# Top level modules:
+# 	Stuff_Block
+# End time: 14:02:10 on Nov 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work {E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/Stuff_TB.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:02:18 on Nov 19,2017
+# vlog -reportprogress 300 -work work E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/Stuff_TB.v 
+# -- Compiling module Stuff_TB
+# 
+# Top level modules:
+# 	Stuff_TB
+# End time: 14:02:18 on Nov 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.Stuff_TB
+# vsim work.Stuff_TB 
+# Start time: 14:02:22 on Nov 19,2017
+# Loading work.Stuff_TB
+# Loading work.Stuff_Block
+add wave -position end  sim:/Stuff_TB/clk
+add wave -position end  sim:/Stuff_TB/reset
+add wave -position end  sim:/Stuff_TB/RX
+add wave -position end  sim:/Stuff_TB/SP
+add wave -position end  sim:/Stuff_TB/F_STF
+add wave -position end  sim:/Stuff_TB/sp_decision
+add wave -position end  sim:/Stuff_TB/saida
+run -all
+#  
+# <============== Always Block ==============>
+# Flag de Bit Stuff Ativada
+#  
+# RX : 0
+# Previous Bit : x
+#  
+# SP: 0
+# Contador:   x
+#  
+# Bit diferente
+#  
+# <============== // ==============>
+#  
+# <============== Always Block ==============>
+# Flag de Bit Stuff Ativada
+#  
+# RX : 0
+# Previous Bit : 0
+#  
+# SP: 1
+# Contador:   0
+#  
+# Bit igual
+#  
+# <============== // ==============>
+#  
+# <============== Always Block ==============>
+# Flag de Bit Stuff Ativada
+#  
+# RX : 0
+# Previous Bit : 0
+#  
+# SP: 1
+# Contador:   1
+#  
+# Bit igual
+#  
+# <============== // ==============>
+#  
+# <============== Always Block ==============>
+# Flag de Bit Stuff Ativada
+#  
+# RX : 0
+# Previous Bit : 0
+#  
+# SP: 0
+# Contador:   2
+#  
+# Bit igual
+#  
+# <============== // ==============>
+#  
+# <============== Always Block ==============>
+# Flag de Bit Stuff Ativada
+#  
+# RX : 0
+# Previous Bit : 0
+#  
+# SP: 1
+# Contador:   3
+#  
+# Bit igual
+#  
+# <============== // ==============>
+#  
+# <============== Always Block ==============>
+# Flag de Bit Stuff Ativada
+#  
+# RX : 0
+# Previous Bit : 0
+#  
+# SP: 1
+# Contador:   4
+#  
+# Bit igual
+#  
+# <============== // ==============>
+#  
+# <============== Always Block ==============>
+# Flag de Bit Stuff Ativada
+#  
+# RX : 0
+# Previous Bit : 0
+#  
+# SP: 0
+# Contador:   5
+#  
+# Bit Stuffing
+#  
+# <============== // ==============>
+#  
+# <============== Always Block ==============>
+# Flag de Bit Stuff Ativada
+#  
+# RX : 0
+# Previous Bit : 0
+#  
+# SP: 1
+# Contador:   0
+#  
+# Bit igual
+#  
+# <============== // ==============>
+#  
+# <============== Always Block ==============>
+# Flag de Bit Stuff Ativada
+#  
+# RX : 0
+# Previous Bit : 0
+#  
+# SP: 1
+# Contador:   1
+#  
+# Bit igual
+#  
+# <============== // ==============>
+#  
+# <============== Always Block ==============>
+# Flag de Bit Stuff Ativada
+#  
+# RX : 0
+# Previous Bit : 0
+#  
+# SP: 0
+# Contador:   2
+#  
+# Bit igual
+#  
+# <============== // ==============>
+# ** Note: $stop    : E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/Stuff_TB.v(34)
+#    Time: 20 ps  Iteration: 0  Instance: /Stuff_TB
+# Break in Module Stuff_TB at E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/Stuff_TB.v line 34
+# End time: 14:05:26 on Nov 19,2017, Elapsed time: 0:03:04
+# Errors: 0, Warnings: 0

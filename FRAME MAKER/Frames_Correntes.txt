@@ -1,0 +1,104 @@
+0-00000000001-0000010(0001101010111100)[111111111111111]1111111111
+CAN Base
+Data
+2 Bytes de Dados
+
+11
+Intermission
+
+11
+Bus Idle
+
+0-00000000010-0000010(000111111...
+CAN Base
+Data
+2 Bytes de Dados
+Erro de Stuffing
+
+00000000001011111111
+Error Frame
+Superposition de 4 bits
+Delimiter resetando após Segundo bit
+
+11
+Intermission
+
+11111111
+Bus Idle
+
+0-00000000000-11-000000000000000011-1010010[111111111111111]1111111111
+CAN Extended
+Remote
+r0 com '1'
+
+11
+Intermission
+
+0-00000000000-11-000000000000000011-1010010[111111111111111]11111110...
+CAN Extended
+Remote
+Erro de EOF
+
+0000000001111011111111
+Error Frame
+Superposition de 3 bits
+Delimiter resetando após Quinto bit
+
+Intermission
+1
+
+0000000001111011111111
+Overload Frame
+Superposition de 3 bits
+Delimiter resetando após Quinto bit
+
+11
+Intermission
+
+0-00000000100-0010010010(0001101010111100)[111111111111111]1111111111						- EOF (7)
+CAN FD Base Frame
+Data
+BRS = 0
+
+11
+Intermission
+
+1
+Bus Idle
+
+0-00000000000-11-000000000000000101-010000010(0001101010111100)[111111111111111]1111111111	
+CAN FD Extended Frame
+Data
+BRS = 0
+
+11
+Intermission
+
+11111111
+Bus Idle
+
+0-00000000000-11-000000000000000101-010000010(0001101010111100)[111111111111111]110...	
+CAN FD Extended Frame
+Data
+Erro de ACK Delimiter
+
+00000000000011111111
+Error Frame
+Superposition de 6 bits
+Delimiter não reseta
+
+0000000001111011111111
+Overload Frame
+Superposition de 3 bits
+Delimiter resetando após Quinto bit
+
+11
+Intermission
+
+11111111
+Bus Idle
+
+0-00000000000-11-000000000000000101-010000010(0001101010111100)[111111111111111]0...	
+CAN FD Extended Frame
+Data
+Erro de CRC Delimiter

@@ -4,61 +4,34 @@ module Stuff_TB;
 
 
 
-	reg reset, SP, RX, F_STF;
+	reg clk, reset, RX,  SP, F_STF;
 
-	wire sp_decision;
+	wire sp_decision, saida;
 
 
 
-Stuff_Block block (reset, SP, RX, F_STF, sp_decision);
+Stuff_Block block (clk, reset, RX,  SP, F_STF, sp_decision, saida);
+
+initial begin
+	clk = 0;
+	reset = 1;
+	SP = 0;
+end
+
+always begin 
+	#1 clk = ~clk;
+end
+
+always
+	#3 SP = ~SP;
 
 
 
 	initial begin
-
-		$dumpfile("BSE.vcd");
-
-		$dumpvars(0, bitStuff_TB);
-
+	reset = 0; RX = 0; F_STF = 0; # 20;
 	
-
-		SP = 0; RX = 0 ; F_STF = 0; reset = 1; # 10;
-
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-
-		SP = 1; RX = 1 ; F_STF = 0; reset = 0; # 10; //esse bit
-
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-
-		SP = 0; RX = 0 ; F_STF = 0; reset = 0; # 10;
-
-		SP = 1; RX = 0 ; F_STF = 0; reset = 0; # 10; //esse bit
-
-		
-
-		$display("");
-
 	
+	$stop;
 
 	end
 

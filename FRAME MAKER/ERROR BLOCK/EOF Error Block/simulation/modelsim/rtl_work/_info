@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/ERROR BLOCK/EOF Error Block/simulation/modelsim
+vEOF_Error_Block
+Z1 !s110 1511186241
+!i10b 1
+!s100 loKjOIclIH__IUF<3A]O^2
+IollXLdY[`^F=1SYMLO2_O0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1511185685
+8F:/ERROR BLOCK/EOF Error Block/EOF_Error_Block.v
+FF:/ERROR BLOCK/EOF Error Block/EOF_Error_Block.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1511186240.000000
+!s107 F:/ERROR BLOCK/EOF Error Block/EOF_Error_Block.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/ERROR BLOCK/EOF Error Block|F:/ERROR BLOCK/EOF Error Block/EOF_Error_Block.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work {+incdir+F:/ERROR BLOCK/EOF Error Block}
+Z6 tCvgOpt 0
+n@e@o@f_@error_@block
+vEOF_Error_Block_TB
+R1
+!i10b 1
+!s100 ;:KMh]fa2WKcbQH7DT]YG2
+IU4g4]YOI<Hm:1fFL?:L<z1
+R2
+R0
+w1511185250
+8F:/ERROR BLOCK/EOF Error Block/EOF_Error_Block_TB.v
+FF:/ERROR BLOCK/EOF Error Block/EOF_Error_Block_TB.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1511186241.000000
+!s107 F:/ERROR BLOCK/EOF Error Block/EOF_Error_Block_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/ERROR BLOCK/EOF Error Block|F:/ERROR BLOCK/EOF Error Block/EOF_Error_Block_TB.v|
+!i113 1
+R4
+R5
+R6
+n@e@o@f_@error_@block_@t@b

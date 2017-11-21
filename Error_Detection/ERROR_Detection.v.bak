@@ -1,7 +1,0 @@
-module ERROR_Detection(
-
-input reset, SP, RX, F_STF,
-output reg STF_ERR
-
-
-);

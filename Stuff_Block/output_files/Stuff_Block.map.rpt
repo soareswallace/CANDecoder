@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Stuff_Block
-Sun Nov 12 23:10:30 2017
+Sun Nov 19 14:01:56 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -45,14 +45,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 12 23:10:30 2017       ;
+; Analysis & Synthesis Status     ; Successful - Sun Nov 19 14:01:56 2017       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Stuff_Block                                 ;
 ; Top-level Entity Name           ; Stuff_Block                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 11                                          ;
-; Total pins                      ; 5                                           ;
+; Total pins                      ; 7                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -152,40 +152,40 @@ agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                   ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
-; Stuff_Block.v                    ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/17.0/Stuff_Block/Stuff_Block.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
+; Stuff_Block.v                    ; yes             ; User Verilog HDL File  ; E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/Stuff_Block.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 10          ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 17          ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 2           ;
-;     -- 5 input functions                    ; 1           ;
-;     -- 4 input functions                    ; 1           ;
-;     -- <=3 input functions                  ; 13          ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 11          ;
-;                                             ;             ;
-; I/O pins                                    ; 5           ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 13          ;
-; Total fan-out                               ; 96          ;
-; Average fan-out                             ; 2.53        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 9         ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 14        ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 3         ;
+;     -- 5 input functions                    ; 0         ;
+;     -- 4 input functions                    ; 0         ;
+;     -- <=3 input functions                  ; 11        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 11        ;
+;                                             ;           ;
+; I/O pins                                    ; 7         ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 11        ;
+; Total fan-out                               ; 80        ;
+; Average fan-out                             ; 2.05      ;
++---------------------------------------------+-----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -193,7 +193,7 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |Stuff_Block               ; 17 (17)             ; 11 (11)                   ; 0                 ; 0          ; 5    ; 0            ; |Stuff_Block        ; Stuff_Block ; work         ;
+; |Stuff_Block               ; 14 (14)             ; 11 (11)                   ; 0                 ; 0          ; 7    ; 0            ; |Stuff_Block        ; Stuff_Block ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -206,7 +206,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 11    ;
 ; Number of registers using Synchronous Clear  ; 9     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -218,7 +218,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |Stuff_Block|cont[0]       ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |Stuff_Block|cont[8]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -238,22 +238,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 11                          ;
-;     CLR               ; 1                           ;
-;     CLR SCLR          ; 9                           ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 17                          ;
+;     SCLR              ; 9                           ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 14                          ;
 ;     arith             ; 9                           ;
 ;         1 data inputs ; 9                           ;
-;     normal            ; 8                           ;
+;     normal            ; 5                           ;
 ;         2 data inputs ; 1                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 1                           ;
-;         6 data inputs ; 2                           ;
-; boundary_port         ; 5                           ;
+;         3 data inputs ; 1                           ;
+;         6 data inputs ; 3                           ;
+; boundary_port         ; 7                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.98                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.63                        ;
 +-----------------------+-----------------------------+
 
 
@@ -262,7 +259,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -272,36 +269,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Nov 12 23:09:49 2017
+    Info: Processing started: Sun Nov 19 14:01:50 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Stuff_Block -c Stuff_Block
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
 Info (12021): Found 1 design units, including 1 entities, in source file stuff_block.v
-    Info (12023): Found entity 1: Stuff_Block File: C:/intelFPGA_lite/17.0/Stuff_Block/Stuff_Block.v Line: 1
+    Info (12023): Found entity 1: Stuff_Block File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/Stuff_Block.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file stuff_tb.v
-    Info (12023): Found entity 1: Stuff_TB File: C:/intelFPGA_lite/17.0/Stuff_Block/Stuff_TB.v Line: 3
+    Info (12023): Found entity 1: Stuff_TB File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/Stuff_TB.v Line: 3
 Info (12127): Elaborating entity "Stuff_Block" for the top level hierarchy
-Warning (10855): Verilog HDL warning at Stuff_Block.v(11): initial value for variable previous_bit should be constant File: C:/intelFPGA_lite/17.0/Stuff_Block/Stuff_Block.v Line: 11
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "previous_bit" is converted into an equivalent circuit using register "previous_bit~_emulated" and latch "previous_bit~1" File: C:/intelFPGA_lite/17.0/Stuff_Block/Stuff_Block.v Line: 9
+Warning (10855): Verilog HDL warning at Stuff_Block.v(12): initial value for variable previous_bit should be constant File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/Stuff_Block.v Line: 12
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/intelFPGA_lite/17.0/Stuff_Block/output_files/Stuff_Block.map.smsg
+Info (144001): Generated suppressed messages file E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/output_files/Stuff_Block.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 17 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 670 megabytes
-    Info: Processing ended: Sun Nov 12 23:10:30 2017
-    Info: Elapsed time: 00:00:41
-    Info: Total CPU time (on all processors): 00:00:40
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 15 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 643 megabytes
+    Info: Processing ended: Sun Nov 19 14:01:56 2017
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/intelFPGA_lite/17.0/Stuff_Block/output_files/Stuff_Block.map.smsg.
+The suppressed messages can be found in E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/output_files/Stuff_Block.map.smsg.
 
 

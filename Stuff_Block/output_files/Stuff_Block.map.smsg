@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at Stuff_Block.v(14): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/17.0/Stuff_Block/Stuff_Block.v Line: 14
+Warning (10268): Verilog HDL information at Stuff_Block.v(15): always construct contains both blocking and non-blocking assignments File: E:/UFPE/7 Periodo/Redes Automotivas/Projeto /CANDecoder/Stuff_Block/Stuff_Block.v Line: 15

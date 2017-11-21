@@ -1,0 +1,567 @@
+Analysis & Synthesis report for Frame_Makers
+Sun Nov 19 22:54:28 2017
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Frame_Makers|OE_Frame_Maker:OE_out|estado_atual
+  9. State Machine - |Frame_Makers|BR_Frame_Maker:BR_out|estado_atual
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: BR_Frame_Maker:BR_out
+ 15. Parameter Settings for User Entity Instance: OE_Frame_Maker:OE_out
+ 16. Port Connectivity Checks: "BR_Frame_Maker:BR_out"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Nov 19 22:54:28 2017       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; Frame_Makers                                ;
+; Top-level Entity Name           ; Frame_Makers                                ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 73                                          ;
+; Total pins                      ; 69                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; Frame_Makers       ; Frame_Makers       ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                       ;
++----------------------------------+-----------------+------------------------+--------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path         ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------+---------+
+; Frame_Makers.v                   ; yes             ; User Verilog HDL File  ; F:/BROE Frame Maker/Frame_Makers.v   ;         ;
+; OE_Frame_Maker.v                 ; yes             ; User Verilog HDL File  ; F:/BROE Frame Maker/OE_Frame_Maker.v ;         ;
+; BR_Frame_Maker.v                 ; yes             ; User Verilog HDL File  ; F:/BROE Frame Maker/BR_Frame_Maker.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 152      ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 232      ;
+;     -- 7 input functions                    ; 9        ;
+;     -- 6 input functions                    ; 62       ;
+;     -- 5 input functions                    ; 27       ;
+;     -- 4 input functions                    ; 19       ;
+;     -- <=3 input functions                  ; 115      ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 73       ;
+;                                             ;          ;
+; I/O pins                                    ; 69       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; SP~input ;
+; Maximum fan-out                             ; 73       ;
+; Total fan-out                               ; 1150     ;
+; Average fan-out                             ; 2.60     ;
++---------------------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+----------------+--------------+
+; |Frame_Makers              ; 232 (1)             ; 73 (0)                    ; 0                 ; 0          ; 69   ; 0            ; |Frame_Makers                       ; Frame_Makers   ; work         ;
+;    |BR_Frame_Maker:BR_out| ; 191 (191)           ; 58 (58)                   ; 0                 ; 0          ; 0    ; 0            ; |Frame_Makers|BR_Frame_Maker:BR_out ; BR_Frame_Maker ; work         ;
+;    |OE_Frame_Maker:OE_out| ; 40 (40)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |Frame_Makers|OE_Frame_Maker:OE_out ; OE_Frame_Maker ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Frame_Makers|OE_Frame_Maker:OE_out|estado_atual                                                              ;
++-----------------------+-------------------+-------------------+-------------------+-----------------------+-------------------+
+; Name                  ; estado_atual.sts4 ; estado_atual.sts3 ; estado_atual.sts2 ; estado_atual.00000000 ; estado_atual.sts5 ;
++-----------------------+-------------------+-------------------+-------------------+-----------------------+-------------------+
+; estado_atual.00000000 ; 0                 ; 0                 ; 0                 ; 0                     ; 0                 ;
+; estado_atual.sts2     ; 0                 ; 0                 ; 1                 ; 1                     ; 0                 ;
+; estado_atual.sts3     ; 0                 ; 1                 ; 0                 ; 1                     ; 0                 ;
+; estado_atual.sts4     ; 1                 ; 0                 ; 0                 ; 1                     ; 0                 ;
+; estado_atual.sts5     ; 0                 ; 0                 ; 0                 ; 1                     ; 1                 ;
++-----------------------+-------------------+-------------------+-------------------+-----------------------+-------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Frame_Makers|BR_Frame_Maker:BR_out|estado_atual                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++------------------------+----------------------+----------------------+--------------------+---------------------+----------------------+---------------------+--------------------+-----------------------+-----------------------+-----------------------+-----------------------+------------------------+------------------------+------------------------+---------------------+---------------------+---------------------+-----------------------+-----------------------+----------------------+----------------------+----------------------+-----------------------+-----------------------+-----------------------+---------------------+---------------------+-------------------+-------------------+-------------------+-----------------------+
+; Name                   ; estado_atual.sts_OVL ; estado_atual.sts_INT ; estado_atual.sts_V ; estado_atual.sts_IV ; estado_atual.sts_III ; estado_atual.sts_II ; estado_atual.sts_I ; estado_atual.sts_EF13 ; estado_atual.sts_EF12 ; estado_atual.sts_EF11 ; estado_atual.sts_EF10 ; estado_atual.sts_ECD11 ; estado_atual.sts_ECR10 ; estado_atual.sts_ECD10 ; estado_atual.sts_E9 ; estado_atual.sts_E8 ; estado_atual.sts_E7 ; estado_atual.sts_BF11 ; estado_atual.sts_BF10 ; estado_atual.sts_BF9 ; estado_atual.sts_BF8 ; estado_atual.sts_BF7 ; estado_atual.sts_BCD8 ; estado_atual.sts_BCR7 ; estado_atual.sts_BCD7 ; estado_atual.sts_E6 ; estado_atual.sts_B6 ; estado_atual.sts5 ; estado_atual.sts4 ; estado_atual.sts3 ; estado_atual.00000000 ;
++------------------------+----------------------+----------------------+--------------------+---------------------+----------------------+---------------------+--------------------+-----------------------+-----------------------+-----------------------+-----------------------+------------------------+------------------------+------------------------+---------------------+---------------------+---------------------+-----------------------+-----------------------+----------------------+----------------------+----------------------+-----------------------+-----------------------+-----------------------+---------------------+---------------------+-------------------+-------------------+-------------------+-----------------------+
+; estado_atual.00000000  ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 0                     ;
+; estado_atual.sts3      ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 1                 ; 1                     ;
+; estado_atual.sts4      ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 1                 ; 0                 ; 1                     ;
+; estado_atual.sts5      ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 1                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_B6    ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 1                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_E6    ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 1                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_BCD7  ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 1                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_BCR7  ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 1                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_BCD8  ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 1                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_BF7   ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 1                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_BF8   ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 1                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_BF9   ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 1                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_BF10  ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 1                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_BF11  ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 1                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_E7    ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 1                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_E8    ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 1                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_E9    ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 1                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_ECD10 ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 1                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_ECR10 ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 1                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_ECD11 ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 1                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_EF10  ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 1                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_EF11  ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 1                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_EF12  ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 1                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_EF13  ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 1                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_I     ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 1                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_II    ; 0                    ; 0                    ; 0                  ; 0                   ; 0                    ; 1                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_III   ; 0                    ; 0                    ; 0                  ; 0                   ; 1                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_IV    ; 0                    ; 0                    ; 0                  ; 1                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_V     ; 0                    ; 0                    ; 1                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_INT   ; 0                    ; 1                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
+; estado_atual.sts_OVL   ; 1                    ; 0                    ; 0                  ; 0                   ; 0                    ; 0                   ; 0                  ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ; 0                     ; 0                     ; 0                     ; 0                   ; 0                   ; 0                 ; 0                 ; 0                 ; 1                     ;
++------------------------+----------------------+----------------------+--------------------+---------------------+----------------------+---------------------+--------------------+-----------------------+-----------------------+-----------------------+-----------------------+------------------------+------------------------+------------------------+---------------------+---------------------+---------------------+-----------------------+-----------------------+----------------------+----------------------+----------------------+-----------------------+-----------------------+-----------------------+---------------------+---------------------+-------------------+-------------------+-------------------+-----------------------+
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; OE_Frame_Maker:OE_out|estado_atual~7   ; Lost fanout        ;
+; OE_Frame_Maker:OE_out|estado_atual~8   ; Lost fanout        ;
+; OE_Frame_Maker:OE_out|estado_atual~10  ; Lost fanout        ;
+; OE_Frame_Maker:OE_out|estado_atual~11  ; Lost fanout        ;
+; OE_Frame_Maker:OE_out|estado_atual~12  ; Lost fanout        ;
+; OE_Frame_Maker:OE_out|estado_atual~13  ; Lost fanout        ;
+; OE_Frame_Maker:OE_out|estado_atual~14  ; Lost fanout        ;
+; BR_Frame_Maker:BR_out|estado_atual~36  ; Lost fanout        ;
+; BR_Frame_Maker:BR_out|estado_atual~37  ; Lost fanout        ;
+; BR_Frame_Maker:BR_out|estado_atual~38  ; Lost fanout        ;
+; BR_Frame_Maker:BR_out|estado_atual~39  ; Lost fanout        ;
+; BR_Frame_Maker:BR_out|estado_atual~40  ; Lost fanout        ;
+; BR_Frame_Maker:BR_out|estado_atual~41  ; Lost fanout        ;
+; BR_Frame_Maker:BR_out|estado_atual~42  ; Lost fanout        ;
+; BR_Frame_Maker:BR_out|estado_atual~43  ; Lost fanout        ;
+; Total Number of Removed Registers = 15 ;                    ;
++----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 73    ;
+; Number of registers using Synchronous Clear  ; 27    ;
+; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; BR_Frame_Maker:BR_out|F_STF            ; 2       ;
+; BR_Frame_Maker:BR_out|F_EOF            ; 2       ;
+; BR_Frame_Maker:BR_out|F_CRC            ; 4       ;
+; BR_Frame_Maker:BR_out|F_IDF            ; 2       ;
+; BR_Frame_Maker:BR_out|F_ACK_D          ; 2       ;
+; BR_Frame_Maker:BR_out|F_CRC_D          ; 3       ;
+; OE_Frame_Maker:OE_out|F_ITMSS          ; 6       ;
+; BR_Frame_Maker:BR_out|F_OVRLD          ; 5       ;
+; Total number of inverted registers = 8 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 9:1                ; 9 bits    ; 54 LEs        ; 0 LEs                ; 54 LEs                 ; Yes        ; |Frame_Makers|OE_Frame_Maker:OE_out|cont[3]      ;
+; 20:1               ; 8 bits    ; 104 LEs       ; 0 LEs                ; 104 LEs                ; Yes        ; |Frame_Makers|BR_Frame_Maker:BR_out|cont[2]      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |Frame_Makers|BR_Frame_Maker:BR_out|F_EOF        ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 25 LEs               ; 5 LEs                  ; No         ; |Frame_Makers|OE_Frame_Maker:OE_out|Selector10   ;
+; 29:1               ; 10 bits   ; 190 LEs       ; 100 LEs              ; 90 LEs                 ; No         ; |Frame_Makers|BR_Frame_Maker:BR_out|estado_atual ;
+; 29:1               ; 2 bits    ; 38 LEs        ; 10 LEs               ; 28 LEs                 ; No         ; |Frame_Makers|BR_Frame_Maker:BR_out|estado_atual ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BR_Frame_Maker:BR_out ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; sts1           ; 0     ; Signed Integer                            ;
+; sts2           ; 1     ; Signed Integer                            ;
+; sts3           ; 2     ; Signed Integer                            ;
+; sts4           ; 3     ; Signed Integer                            ;
+; sts5           ; 4     ; Signed Integer                            ;
+; sts_B6         ; 5     ; Signed Integer                            ;
+; sts_E6         ; 6     ; Signed Integer                            ;
+; sts_BCD7       ; 7     ; Signed Integer                            ;
+; sts_BCR7       ; 8     ; Signed Integer                            ;
+; sts_BCD8       ; 9     ; Signed Integer                            ;
+; sts_BF7        ; 10    ; Signed Integer                            ;
+; sts_BF8        ; 11    ; Signed Integer                            ;
+; sts_BF9        ; 12    ; Signed Integer                            ;
+; sts_BF10       ; 13    ; Signed Integer                            ;
+; sts_BF11       ; 14    ; Signed Integer                            ;
+; sts_E7         ; 15    ; Signed Integer                            ;
+; sts_E8         ; 16    ; Signed Integer                            ;
+; sts_E9         ; 17    ; Signed Integer                            ;
+; sts_ECD10      ; 18    ; Signed Integer                            ;
+; sts_ECR10      ; 19    ; Signed Integer                            ;
+; sts_ECD11      ; 20    ; Signed Integer                            ;
+; sts_EF10       ; 21    ; Signed Integer                            ;
+; sts_EF11       ; 22    ; Signed Integer                            ;
+; sts_EF12       ; 23    ; Signed Integer                            ;
+; sts_EF13       ; 24    ; Signed Integer                            ;
+; sts_I          ; 25    ; Signed Integer                            ;
+; sts_II         ; 26    ; Signed Integer                            ;
+; sts_III        ; 27    ; Signed Integer                            ;
+; sts_IV         ; 28    ; Signed Integer                            ;
+; sts_V          ; 29    ; Signed Integer                            ;
+; sts_INT        ; 30    ; Signed Integer                            ;
+; sts_OVL        ; 31    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: OE_Frame_Maker:OE_out ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; sts1           ; 0     ; Signed Integer                            ;
+; sts2           ; 1     ; Signed Integer                            ;
+; sts3           ; 2     ; Signed Integer                            ;
+; sts4           ; 3     ; Signed Integer                            ;
+; sts5           ; 4     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BR_Frame_Maker:BR_out"                                                                                                          ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                      ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
+; IDFw    ; Output ; Warning  ; Output or bidir port (11 bits) is wider than the port expression (1 bits) it drives; bit(s) "IDFw[10..1]" have no fanouts    ;
+; IDF_exw ; Output ; Warning  ; Output or bidir port (18 bits) is wider than the port expression (1 bits) it drives; bit(s) "IDF_exw[17..1]" have no fanouts ;
+; DLCw    ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "DLCw[3..1]" have no fanouts      ;
+; CRCw    ; Output ; Warning  ; Output or bidir port (15 bits) is wider than the port expression (1 bits) it drives; bit(s) "CRCw[14..1]" have no fanouts    ;
+; EOFw    ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "EOFw[6..1]" have no fanouts      ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 73                          ;
+;     ENA               ; 2                           ;
+;     SCLR              ; 25                          ;
+;     SCLR SLD          ; 2                           ;
+;     plain             ; 44                          ;
+; arriav_lcell_comb     ; 238                         ;
+;     arith             ; 55                          ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 51                          ;
+;     extend            ; 9                           ;
+;         7 data inputs ; 9                           ;
+;     normal            ; 174                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 26                          ;
+;         4 data inputs ; 19                          ;
+;         5 data inputs ; 27                          ;
+;         6 data inputs ; 62                          ;
+; boundary_port         ; 69                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 3.04                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Sun Nov 19 22:54:10 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Frame_Makers -c Frame_Makers
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file frame_makers.v
+    Info (12023): Found entity 1: Frame_Makers File: F:/BROE Frame Maker/Frame_Makers.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file oe_frame_maker.v
+    Info (12023): Found entity 1: OE_Frame_Maker File: F:/BROE Frame Maker/OE_Frame_Maker.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file br_frame_maker.v
+    Info (12023): Found entity 1: BR_Frame_Maker File: F:/BROE Frame Maker/BR_Frame_Maker.v Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "F_ITMSSw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "F_OVRLDw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "RTRw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "IDEw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "EDLw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "BRSw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "F_STFw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "F_EOFw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "F_CRCw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "F_IDFw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "F_ACK_Dw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "F_CRC_Dw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "IDFw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "IDF_exw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "DLCw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "CRCw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Frame_Makers.v(11): created implicit net for "EOFw" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Info (12127): Elaborating entity "Frame_Makers" for the top level hierarchy
+Info (12128): Elaborating entity "BR_Frame_Maker" for hierarchy "BR_Frame_Maker:BR_out" File: F:/BROE Frame Maker/Frame_Makers.v Line: 11
+Warning (10858): Verilog HDL warning at BR_Frame_Maker.v(23): object CRC used but never assigned File: F:/BROE Frame Maker/BR_Frame_Maker.v Line: 23
+Warning (10036): Verilog HDL or VHDL warning at BR_Frame_Maker.v(25): object "ACK_d" assigned a value but never read File: F:/BROE Frame Maker/BR_Frame_Maker.v Line: 25
+Warning (10036): Verilog HDL or VHDL warning at BR_Frame_Maker.v(25): object "CRC_d" assigned a value but never read File: F:/BROE Frame Maker/BR_Frame_Maker.v Line: 25
+Warning (10030): Net "CRC" at BR_Frame_Maker.v(23) has no driver or initial value, using a default initial value '0' File: F:/BROE Frame Maker/BR_Frame_Maker.v Line: 23
+Info (12128): Elaborating entity "OE_Frame_Maker" for hierarchy "OE_Frame_Maker:OE_out" File: F:/BROE Frame Maker/Frame_Makers.v Line: 12
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "IDF[1]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 4
+    Warning (13410): Pin "IDF[2]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 4
+    Warning (13410): Pin "IDF[3]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 4
+    Warning (13410): Pin "IDF[4]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 4
+    Warning (13410): Pin "IDF[5]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 4
+    Warning (13410): Pin "IDF[6]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 4
+    Warning (13410): Pin "IDF[7]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 4
+    Warning (13410): Pin "IDF[8]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 4
+    Warning (13410): Pin "IDF[9]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 4
+    Warning (13410): Pin "IDF[10]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 4
+    Warning (13410): Pin "IDF_ex[1]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[2]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[3]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[4]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[5]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[6]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[7]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[8]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[9]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[10]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[11]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[12]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[13]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[14]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[15]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[16]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "IDF_ex[17]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 5
+    Warning (13410): Pin "DLC[1]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 6
+    Warning (13410): Pin "DLC[2]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 6
+    Warning (13410): Pin "DLC[3]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 6
+    Warning (13410): Pin "CRC[0]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[1]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[2]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[3]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[4]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[5]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[6]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[7]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[8]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[9]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[10]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[11]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[12]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[13]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "CRC[14]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 7
+    Warning (13410): Pin "EOF[1]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 9
+    Warning (13410): Pin "EOF[2]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 9
+    Warning (13410): Pin "EOF[3]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 9
+    Warning (13410): Pin "EOF[4]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 9
+    Warning (13410): Pin "EOF[5]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 9
+    Warning (13410): Pin "EOF[6]" is stuck at GND File: F:/BROE Frame Maker/Frame_Makers.v Line: 9
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 15 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 301 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 65 output pins
+    Info (21061): Implemented 232 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 75 warnings
+    Info: Peak virtual memory: 712 megabytes
+    Info: Processing ended: Sun Nov 19 22:54:28 2017
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:40
+
+
