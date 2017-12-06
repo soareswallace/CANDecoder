@@ -1,4 +1,0 @@
-module Form_Error_Block(
-	input reset, SP, RX, F_ACK_D, F_CRC_D,
-	output reg[1:0] Form_Error
-);

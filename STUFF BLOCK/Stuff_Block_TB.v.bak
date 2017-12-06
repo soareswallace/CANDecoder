@@ -1,0 +1,40 @@
+module Stuff_TB;
+	reg reset, SP_old, RX, F_STF;
+	wire SP;
+
+
+
+Stuff_Block block (reset, SP, RX, F_STF, sp_decision);
+
+	initial begin
+		SP_old = ~SP_old # 3;
+	end
+
+
+	initial begin
+
+		SP_old = 0; RX = 1 ; F_STF = 1; reset = 0; # 6;
+		SP_old = 1; RX = 1 ; F_STF = 1; reset = 0; # 6;
+		SP_old = 0; RX = 0 ; F_STF = 0; reset = 0; # 6;
+		SP_old = 1; RX = 0 ; F_STF = 0; reset = 0; # 6;
+		SP_old = 0; RX = 0 ; F_STF = 0; reset = 0; # 6;
+		SP_old = 1; RX = 0 ; F_STF = 0; reset = 0; # 6;
+		SP_old = 0; RX = 0 ; F_STF = 0; reset = 0; # 6;
+		SP_old = 1; RX = 1 ; F_STF = 0; reset = 0; # 6; //esse bit
+		SP_old = 0; RX = 0 ; F_STF = 0; reset = 0; # 6;
+		SP_old = 1; RX = 0 ; F_STF = 0; reset = 0; # 6;
+		SP_old = 0; RX = 1 ; F_STF = 0; reset = 0; # 6;
+		SP_old = 1; RX = 1 ; F_STF = 0; reset = 0; # 6;
+		SP_old = 0; RX = 1 ; F_STF = 0; reset = 0; # 6;
+		SP_old = 1; RX = 1 ; F_STF = 0; reset = 0; # 6;
+		SP_old = 0; RX = 1 ; F_STF = 0; reset = 0; # 6;
+		SP_old = 1; RX = 0 ; F_STF = 0; reset = 0; # 6; //esse bit
+		SP_old = 1; RX = 0 ; F_STF = 0; reset = 0; # 6;
+
+		$stop;
+
+	
+
+	end
+
+endmodule

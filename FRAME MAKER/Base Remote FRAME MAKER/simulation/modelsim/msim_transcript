@@ -1,0 +1,1055 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do BR_Frame_Maker_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+F:/Base\ Remote\ FRAME\ MAKER {F:/Base Remote FRAME MAKER/BR_Frame_Maker.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:34:31 on Nov 19,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/Base Remote FRAME MAKER" F:/Base Remote FRAME MAKER/BR_Frame_Maker.v 
+# -- Compiling module BR_Frame_Maker
+# 
+# Top level modules:
+# 	BR_Frame_Maker
+# End time: 16:34:31 on Nov 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+F:/Base\ Remote\ FRAME\ MAKER {F:/Base Remote FRAME MAKER/BR_Frame_Maker_TB.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:34:31 on Nov 19,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/Base Remote FRAME MAKER" F:/Base Remote FRAME MAKER/BR_Frame_Maker_TB.v 
+# -- Compiling module BR_Frame_Maker_TB
+# 
+# Top level modules:
+# 	BR_Frame_Maker_TB
+# End time: 16:34:31 on Nov 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  BR_Frame_Maker_TB
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" BR_Frame_Maker_TB 
+# Start time: 16:34:31 on Nov 19,2017
+# Loading work.BR_Frame_Maker_TB
+# Loading work.BR_Frame_Maker
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: R�ger Luiz  Hostname: LAPTOP-VEH14PMV  ProcessID: 11708
+#           Attempting to use alternate WLF file "./wlftca96x9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftca96x9
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Estou no Bus Idle
+# 
+# 
+# 
+# Porem ja estou no SOF
+# Estou no Identifier          1
+# Estou no Identifier          2
+# Estou no Identifier          3
+# Estou no Identifier          4
+# Estou no Identifier          5
+# Estou no Identifier          6
+# Estou no Identifier          7
+# Estou no Identifier          8
+# Estou no Identifier          9
+# Estou no Identifier         10
+# Estou no Identifier         11
+# Porem Vou mudar pro RTR
+# Estou no RTR
+# Estou no IDE
+# Estou no EDL Base
+# Estou no DLC do CAN Base Data          1
+# Estou no DLC do CAN Base Data          2
+# Estou no DLC do CAN Base Data          3
+# Estou no DLC do CAN Base Data          4
+# Estou no Data Field          1
+# Estou no Data Field          2
+# Estou no Data Field          3
+# Estou no Data Field          4
+# Estou no Data Field          5
+# Estou no Data Field          6
+# Estou no Data Field          7
+# Estou no Data Field          8
+# Estou no Data Field          9
+# Estou no Data Field         10
+# Estou no Data Field         11
+# Estou no Data Field         12
+# Estou no Data Field         13
+# Estou no Data Field         14
+# Estou no Data Field         15
+# Estou no Data Field         16
+# Estou no CRC          1
+# Contador:   0
+# Estou no CRC          2
+# Contador:   1
+# Estou no CRC          3
+# Contador:   2
+# Estou no CRC          4
+# Contador:   3
+# Estou no CRC          5
+# Contador:   4
+# Estou no CRC          6
+# Contador:   5
+# Estou no CRC          7
+# Contador:   6
+# Estou no CRC          8
+# Contador:   7
+# Estou no CRC          9
+# Contador:   8
+# Estou no CRC         10
+# Contador:   9
+# Estou no CRC         11
+# Contador:  10
+# Estou no CRC         12
+# Contador:  11
+# Estou no CRC         13
+# Contador:  12
+# Estou no CRC         14
+# Contador:  13
+# Estou no CRC         15
+# Contador:  14
+# Estou no CRC Delimiter
+# Estou no ACK
+# Estou no ACK Delimiter
+# Estou no EOF          1
+# Estou no EOF          2
+# Estou no EOF          3
+# Estou no EOF          4
+# Estou no EOF          5
+# Estou no EOF          6
+# Estou no EOF          7
+# 
+# 
+# ----------RELATORIO DO FRAME----------
+# 
+# 
+# RTR: 0 0(Data) e 1(Remote)
+# IDE: 0 0(Base) e 1(Extended)
+# EDL: 0 0(CAN) e 1(CAN FD)
+# BRS: 0 0(Mantem) e 1(Muda)
+# Identifier:    1
+# Identifier Extended:      x
+# DLC:  2
+# EOF: 127 (Tem que ser 127)
+# CRC Delimiter: 1
+# ACK Delimiter: 1
+# 
+# 
+# Estou no Intermission
+# Estou no Intermission
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# 
+# 
+# 
+# Porem ja estou no SOF
+# Estou no Identifier          1
+# Estou no Identifier          2
+# Estou no Identifier          3
+# Estou no Identifier          4
+# Estou no Identifier          5
+# Estou no Identifier          6
+# Estou no Identifier          7
+# Estou no Identifier          8
+# Estou no Identifier          9
+# Estou no Identifier         10
+# Estou no Identifier         11
+# Porem Vou mudar pro RTR
+# Estou no RTR
+# Estou no IDE
+# Estou no EDL Base
+# Estou no DLC do CAN Base Data          1
+# Estou no DLC do CAN Base Data          2
+# Estou no DLC do CAN Base Data          3
+# Estou no DLC do CAN Base Data          4
+# Estou no Data Field          1
+# Estou no Data Field          2
+# Estou no Data Field          3
+# Estou no Data Field          4
+# Estou no Data Field          5
+# Estou no Data Field          6
+# Estou no Data Field          7
+# Estou no Data Field          8
+# Estou no Data Field          9
+# Estou no Data Field         10
+# 
+# 
+# 
+# Estou no primeiro Bit de Erro
+# 
+# 
+# 
+# ----------RELATORIO DO FRAME----------
+# 
+# 
+# RTR: 0 0(Data) e 1(Remote)
+# IDE: 0 0(Base) e 1(Extended)
+# EDL: 0 0(CAN) e 1(CAN FD)
+# BRS: 0 0(Mantem) e 1(Muda)
+# Identifier:    2
+# Identifier Extended:      0
+# DLC:  2
+# EOF:   0 (Tem que ser 127)
+# CRC Delimiter: 1
+# ACK Delimiter: 1
+# 
+# 
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Primeiro Bit de Intermission
+# Estou no Intermission
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# 
+# 
+# 
+# Porem ja estou no SOF
+# Estou no Identifier          1
+# Estou no Identifier          2
+# Estou no Identifier          3
+# Estou no Identifier          4
+# Estou no Identifier          5
+# Estou no Identifier          6
+# Estou no Identifier          7
+# Estou no Identifier          8
+# Estou no Identifier          9
+# Estou no Identifier         10
+# Estou no Identifier         11
+# Porem Vou mudar pro RTR
+# Estou no RTR
+# Estou no IDE
+# Estou no Idf extended          1
+# Estou no Idf extended          2
+# Estou no Idf extended          3
+# Estou no Idf extended          4
+# Estou no Idf extended          5
+# Estou no Idf extended          6
+# Estou no Idf extended          7
+# Estou no Idf extended          8
+# Estou no Idf extended          9
+# Estou no Idf extended         10
+# Estou no Idf extended         11
+# Estou no Idf extended         12
+# Estou no Idf extended         13
+# Estou no Idf extended         14
+# Estou no Idf extended         15
+# Estou no Idf extended         16
+# Estou no Idf extended         17
+# Estou no Idf extended         18
+# Estou no RTR do CAN Extended
+# RX: 1
+# Estou no EDL
+# RX: 0
+# Estou no r0
+# EDL: 0
+# Estou no DLC do CAN Extended Remote          1
+# Estou no DLC do CAN Extended Remote          2
+# Estou no DLC do CAN Extended Remote          3
+# Estou no DLC do CAN Extended Remote          4
+# Estou no CRC          1
+# Contador:   0
+# Estou no CRC          2
+# Contador:   1
+# Estou no CRC          3
+# Contador:   2
+# Estou no CRC          4
+# Contador:   3
+# Estou no CRC          5
+# Contador:   4
+# Estou no CRC          6
+# Contador:   5
+# Estou no CRC          7
+# Contador:   6
+# Estou no CRC          8
+# Contador:   7
+# Estou no CRC          9
+# Contador:   8
+# Estou no CRC         10
+# Contador:   9
+# Estou no CRC         11
+# Contador:  10
+# Estou no CRC         12
+# Contador:  11
+# Estou no CRC         13
+# Contador:  12
+# Estou no CRC         14
+# Contador:  13
+# Estou no CRC         15
+# Contador:  14
+# Estou no CRC Delimiter
+# Estou no ACK
+# Estou no ACK Delimiter
+# Estou no EOF          1
+# Estou no EOF          2
+# Estou no EOF          3
+# Estou no EOF          4
+# Estou no EOF          5
+# Estou no EOF          6
+# Estou no EOF          7
+# 
+# 
+# ----------RELATORIO DO FRAME----------
+# 
+# 
+# RTR: 1 0(Data) e 1(Remote)
+# IDE: 1 0(Base) e 1(Extended)
+# EDL: 0 0(CAN) e 1(CAN FD)
+# BRS: 0 0(Mantem) e 1(Muda)
+# Identifier:    0
+# Identifier Extended:      3
+# DLC:  2
+# EOF: 127 (Tem que ser 127)
+# CRC Delimiter: 1
+# ACK Delimiter: 1
+# 
+# 
+# Estou no Intermission
+# Estou no Intermission
+# Estou no Bus Idle
+# 
+# 
+# 
+# Porem ja estou no SOF
+# Estou no Identifier          1
+# Estou no Identifier          2
+# Estou no Identifier          3
+# Estou no Identifier          4
+# Estou no Identifier          5
+# Estou no Identifier          6
+# Estou no Identifier          7
+# Estou no Identifier          8
+# Estou no Identifier          9
+# Estou no Identifier         10
+# Estou no Identifier         11
+# Porem Vou mudar pro RTR
+# Estou no RTR
+# Estou no IDE
+# Estou no Idf extended          1
+# Estou no Idf extended          2
+# Estou no Idf extended          3
+# Estou no Idf extended          4
+# Estou no Idf extended          5
+# Estou no Idf extended          6
+# Estou no Idf extended          7
+# Estou no Idf extended          8
+# Estou no Idf extended          9
+# Estou no Idf extended         10
+# Estou no Idf extended         11
+# Estou no Idf extended         12
+# Estou no Idf extended         13
+# Estou no Idf extended         14
+# Estou no Idf extended         15
+# Estou no Idf extended         16
+# Estou no Idf extended         17
+# Estou no Idf extended         18
+# Estou no RTR do CAN Extended
+# RX: 1
+# Estou no EDL
+# RX: 0
+# Estou no r0
+# EDL: 0
+# Estou no DLC do CAN Extended Remote          1
+# Estou no DLC do CAN Extended Remote          2
+# Estou no DLC do CAN Extended Remote          3
+# Estou no DLC do CAN Extended Remote          4
+# Estou no CRC          1
+# Contador:   0
+# Estou no CRC          2
+# Contador:   1
+# Estou no CRC          3
+# Contador:   2
+# Estou no CRC          4
+# Contador:   3
+# Estou no CRC          5
+# Contador:   4
+# Estou no CRC          6
+# Contador:   5
+# Estou no CRC          7
+# Contador:   6
+# Estou no CRC          8
+# Contador:   7
+# Estou no CRC          9
+# Contador:   8
+# Estou no CRC         10
+# Contador:   9
+# Estou no CRC         11
+# Contador:  10
+# Estou no CRC         12
+# Contador:  11
+# Estou no CRC         13
+# Contador:  12
+# Estou no CRC         14
+# Contador:  13
+# Estou no CRC         15
+# Contador:  14
+# Estou no CRC Delimiter
+# Estou no ACK
+# Estou no ACK Delimiter
+# Estou no EOF          1
+# Estou no EOF          2
+# Estou no EOF          3
+# Estou no EOF          4
+# Estou no EOF          5
+# Estou no EOF          6
+# 
+# 
+# 
+# Estou no primeiro Bit de Erro
+# 
+# 
+# 
+# ----------RELATORIO DO FRAME----------
+# 
+# 
+# RTR: 1 0(Data) e 1(Remote)
+# IDE: 1 0(Base) e 1(Extended)
+# EDL: 0 0(CAN) e 1(CAN FD)
+# BRS: 0 0(Mantem) e 1(Muda)
+# Identifier:    0
+# Identifier Extended:      4
+# DLC:  2
+# EOF: 120 (Tem que ser 127)
+# CRC Delimiter: 1
+# ACK Delimiter: 1
+# 
+# 
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Primeiro Bit de Intermission
+# Estou no Intermission
+# 
+# 
+# 
+# Porém já estou no Primeiro Bit de Overload
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Primeiro Bit de Intermission
+# Estou no Intermission
+# Estou no Bus Idle
+# 
+# 
+# 
+# Porem ja estou no SOF
+# Estou no Identifier          1
+# Estou no Identifier          2
+# Estou no Identifier          3
+# Estou no Identifier          4
+# Estou no Identifier          5
+# Estou no Identifier          6
+# Estou no Identifier          7
+# Estou no Identifier          8
+# Estou no Identifier          9
+# Estou no Identifier         10
+# Estou no Identifier         11
+# Porem Vou mudar pro RTR
+# Estou no RTR
+# Estou no IDE
+# Estou no EDL Base
+# Estou no Dummy State do Can Base FD
+# Estou no BRS
+# Estou no ESI
+# Estou no DLC do CAN Base FD          1
+# Estou no DLC do CAN Base FD          2
+# Estou no DLC do CAN Base FD          3
+# Estou no DLC do CAN Base FD          4
+# Estou no Data Field          1
+# Estou no Data Field          2
+# Estou no Data Field          3
+# Estou no Data Field          4
+# Estou no Data Field          5
+# Estou no Data Field          6
+# Estou no Data Field          7
+# Estou no Data Field          8
+# Estou no Data Field          9
+# Estou no Data Field         10
+# Estou no Data Field         11
+# Estou no Data Field         12
+# Estou no Data Field         13
+# Estou no Data Field         14
+# Estou no Data Field         15
+# Estou no Data Field         16
+# Estou no CRC          1
+# Contador:   0
+# Estou no CRC          2
+# Contador:   1
+# Estou no CRC          3
+# Contador:   2
+# Estou no CRC          4
+# Contador:   3
+# Estou no CRC          5
+# Contador:   4
+# Estou no CRC          6
+# Contador:   5
+# Estou no CRC          7
+# Contador:   6
+# Estou no CRC          8
+# Contador:   7
+# Estou no CRC          9
+# Contador:   8
+# Estou no CRC         10
+# Contador:   9
+# Estou no CRC         11
+# Contador:  10
+# Estou no CRC         12
+# Contador:  11
+# Estou no CRC         13
+# Contador:  12
+# Estou no CRC         14
+# Contador:  13
+# Estou no CRC         15
+# Contador:  14
+# Estou no CRC Delimiter
+# Estou no ACK
+# Estou no ACK Delimiter
+# Estou no EOF          1
+# Estou no EOF          2
+# Estou no EOF          3
+# Estou no EOF          4
+# Estou no EOF          5
+# Estou no EOF          6
+# Estou no EOF          7
+# 
+# 
+# ----------RELATORIO DO FRAME----------
+# 
+# 
+# RTR: 0 0(Data) e 1(Remote)
+# IDE: 0 0(Base) e 1(Extended)
+# EDL: 1 0(CAN) e 1(CAN FD)
+# BRS: 0 0(Mantem) e 1(Muda)
+# Identifier:    5
+# Identifier Extended:      0
+# DLC:  2
+# EOF: 127 (Tem que ser 127)
+# CRC Delimiter: 1
+# ACK Delimiter: 1
+# 
+# 
+# Estou no Intermission
+# Estou no Intermission
+# Estou no Bus Idle
+# Estou no Bus Idle
+# 
+# 
+# 
+# Porem ja estou no SOF
+# Estou no Identifier          1
+# Estou no Identifier          2
+# Estou no Identifier          3
+# Estou no Identifier          4
+# Estou no Identifier          5
+# Estou no Identifier          6
+# Estou no Identifier          7
+# Estou no Identifier          8
+# Estou no Identifier          9
+# Estou no Identifier         10
+# Estou no Identifier         11
+# Porem Vou mudar pro RTR
+# Estou no RTR
+# Estou no IDE
+# Estou no Idf extended          1
+# Estou no Idf extended          2
+# Estou no Idf extended          3
+# Estou no Idf extended          4
+# Estou no Idf extended          5
+# Estou no Idf extended          6
+# Estou no Idf extended          7
+# Estou no Idf extended          8
+# Estou no Idf extended          9
+# Estou no Idf extended         10
+# Estou no Idf extended         11
+# Estou no Idf extended         12
+# Estou no Idf extended         13
+# Estou no Idf extended         14
+# Estou no Idf extended         15
+# Estou no Idf extended         16
+# Estou no Idf extended         17
+# Estou no Idf extended         18
+# Estou no RTR do CAN Extended
+# RX: 0
+# Estou no EDL
+# RX: 1
+# Estou no r0
+# EDL: 1
+# Estou no BRS do CAN Extended FD
+# Estou no ESI do CAN Extended FD
+# Estou no DLC do CAN Extended FD          1
+# Estou no DLC do CAN Extended FD          2
+# Estou no DLC do CAN Extended FD          3
+# Estou no DLC do CAN Extended FD          4
+# Estou no Data Field          1
+# Estou no Data Field          2
+# Estou no Data Field          3
+# Estou no Data Field          4
+# Estou no Data Field          5
+# Estou no Data Field          6
+# Estou no Data Field          7
+# Estou no Data Field          8
+# Estou no Data Field          9
+# Estou no Data Field         10
+# Estou no Data Field         11
+# Estou no Data Field         12
+# Estou no Data Field         13
+# Estou no Data Field         14
+# Estou no Data Field         15
+# Estou no Data Field         16
+# Estou no CRC          1
+# Contador:   0
+# Estou no CRC          2
+# Contador:   1
+# Estou no CRC          3
+# Contador:   2
+# Estou no CRC          4
+# Contador:   3
+# Estou no CRC          5
+# Contador:   4
+# Estou no CRC          6
+# Contador:   5
+# Estou no CRC          7
+# Contador:   6
+# Estou no CRC          8
+# Contador:   7
+# Estou no CRC          9
+# Contador:   8
+# Estou no CRC         10
+# Contador:   9
+# Estou no CRC         11
+# Contador:  10
+# Estou no CRC         12
+# Contador:  11
+# Estou no CRC         13
+# Contador:  12
+# Estou no CRC         14
+# Contador:  13
+# Estou no CRC         15
+# Contador:  14
+# Estou no CRC Delimiter
+# Estou no ACK
+# Estou no ACK Delimiter
+# Estou no EOF          1
+# Estou no EOF          2
+# Estou no EOF          3
+# Estou no EOF          4
+# Estou no EOF          5
+# Estou no EOF          6
+# Estou no EOF          7
+# 
+# 
+# ----------RELATORIO DO FRAME----------
+# 
+# 
+# RTR: 0 0(Data) e 1(Remote)
+# IDE: 1 0(Base) e 1(Extended)
+# EDL: 1 0(CAN) e 1(CAN FD)
+# BRS: 0 0(Mantem) e 1(Muda)
+# Identifier:    0
+# Identifier Extended:      6
+# DLC:  2
+# EOF: 127 (Tem que ser 127)
+# CRC Delimiter: 1
+# ACK Delimiter: 1
+# 
+# 
+# Estou no Intermission
+# Estou no Intermission
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# 
+# 
+# 
+# Porem ja estou no SOF
+# Estou no Identifier          1
+# Estou no Identifier          2
+# Estou no Identifier          3
+# Estou no Identifier          4
+# Estou no Identifier          5
+# Estou no Identifier          6
+# Estou no Identifier          7
+# Estou no Identifier          8
+# Estou no Identifier          9
+# Estou no Identifier         10
+# Estou no Identifier         11
+# Porem Vou mudar pro RTR
+# Estou no RTR
+# Estou no IDE
+# Estou no Idf extended          1
+# Estou no Idf extended          2
+# Estou no Idf extended          3
+# Estou no Idf extended          4
+# Estou no Idf extended          5
+# Estou no Idf extended          6
+# Estou no Idf extended          7
+# Estou no Idf extended          8
+# Estou no Idf extended          9
+# Estou no Idf extended         10
+# Estou no Idf extended         11
+# Estou no Idf extended         12
+# Estou no Idf extended         13
+# Estou no Idf extended         14
+# Estou no Idf extended         15
+# Estou no Idf extended         16
+# Estou no Idf extended         17
+# Estou no Idf extended         18
+# Estou no RTR do CAN Extended
+# RX: 0
+# Estou no EDL
+# RX: 1
+# Estou no r0
+# EDL: 1
+# Estou no BRS do CAN Extended FD
+# Estou no ESI do CAN Extended FD
+# Estou no DLC do CAN Extended FD          1
+# Estou no DLC do CAN Extended FD          2
+# Estou no DLC do CAN Extended FD          3
+# Estou no DLC do CAN Extended FD          4
+# Estou no Data Field          1
+# Estou no Data Field          2
+# Estou no Data Field          3
+# Estou no Data Field          4
+# Estou no Data Field          5
+# Estou no Data Field          6
+# Estou no Data Field          7
+# Estou no Data Field          8
+# Estou no Data Field          9
+# Estou no Data Field         10
+# Estou no Data Field         11
+# Estou no Data Field         12
+# Estou no Data Field         13
+# Estou no Data Field         14
+# Estou no Data Field         15
+# Estou no Data Field         16
+# Estou no CRC          1
+# Contador:   0
+# Estou no CRC          2
+# Contador:   1
+# Estou no CRC          3
+# Contador:   2
+# Estou no CRC          4
+# Contador:   3
+# Estou no CRC          5
+# Contador:   4
+# Estou no CRC          6
+# Contador:   5
+# Estou no CRC          7
+# Contador:   6
+# Estou no CRC          8
+# Contador:   7
+# Estou no CRC          9
+# Contador:   8
+# Estou no CRC         10
+# Contador:   9
+# Estou no CRC         11
+# Contador:  10
+# Estou no CRC         12
+# Contador:  11
+# Estou no CRC         13
+# Contador:  12
+# Estou no CRC         14
+# Contador:  13
+# Estou no CRC         15
+# Contador:  14
+# Estou no CRC Delimiter
+# Estou no ACK
+# Estou no ACK Delimiter
+# Estou no EOF          1
+# 
+# 
+# 
+# Estou no primeiro Bit de Erro
+# 
+# 
+# 
+# ----------RELATORIO DO FRAME----------
+# 
+# 
+# RTR: 0 0(Data) e 1(Remote)
+# IDE: 1 0(Base) e 1(Extended)
+# EDL: 1 0(CAN) e 1(CAN FD)
+# BRS: 0 0(Mantem) e 1(Muda)
+# Identifier:    0
+# Identifier Extended:      7
+# DLC:  2
+# EOF:   0 (Tem que ser 127)
+# CRC Delimiter: 1
+# ACK Delimiter: 0
+# 
+# 
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Primeiro Bit de Intermission
+# 
+# 
+# 
+# Porém já estou no Primeiro Bit de Overload
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Primeiro Bit de Intermission
+# Estou no Intermission
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# Estou no Bus Idle
+# 
+# 
+# 
+# Porem ja estou no SOF
+# Estou no Identifier          1
+# Estou no Identifier          2
+# Estou no Identifier          3
+# Estou no Identifier          4
+# Estou no Identifier          5
+# Estou no Identifier          6
+# Estou no Identifier          7
+# Estou no Identifier          8
+# Estou no Identifier          9
+# Estou no Identifier         10
+# Estou no Identifier         11
+# Porem Vou mudar pro RTR
+# Estou no RTR
+# Estou no IDE
+# Estou no Idf extended          1
+# Estou no Idf extended          2
+# Estou no Idf extended          3
+# Estou no Idf extended          4
+# Estou no Idf extended          5
+# Estou no Idf extended          6
+# Estou no Idf extended          7
+# Estou no Idf extended          8
+# Estou no Idf extended          9
+# Estou no Idf extended         10
+# Estou no Idf extended         11
+# Estou no Idf extended         12
+# Estou no Idf extended         13
+# Estou no Idf extended         14
+# Estou no Idf extended         15
+# Estou no Idf extended         16
+# Estou no Idf extended         17
+# Estou no Idf extended         18
+# Estou no RTR do CAN Extended
+# RX: 0
+# Estou no EDL
+# RX: 1
+# Estou no r0
+# EDL: 1
+# Estou no BRS do CAN Extended FD
+# Estou no ESI do CAN Extended FD
+# Estou no DLC do CAN Extended FD          1
+# Estou no DLC do CAN Extended FD          2
+# Estou no DLC do CAN Extended FD          3
+# Estou no DLC do CAN Extended FD          4
+# Estou no Data Field          1
+# Estou no Data Field          2
+# Estou no Data Field          3
+# Estou no Data Field          4
+# Estou no Data Field          5
+# Estou no Data Field          6
+# Estou no Data Field          7
+# Estou no Data Field          8
+# Estou no Data Field          9
+# Estou no Data Field         10
+# Estou no Data Field         11
+# Estou no Data Field         12
+# Estou no Data Field         13
+# Estou no Data Field         14
+# Estou no Data Field         15
+# Estou no Data Field         16
+# Estou no CRC          1
+# Contador:   0
+# Estou no CRC          2
+# Contador:   1
+# Estou no CRC          3
+# Contador:   2
+# Estou no CRC          4
+# Contador:   3
+# Estou no CRC          5
+# Contador:   4
+# Estou no CRC          6
+# Contador:   5
+# Estou no CRC          7
+# Contador:   6
+# Estou no CRC          8
+# Contador:   7
+# Estou no CRC          9
+# Contador:   8
+# Estou no CRC         10
+# Contador:   9
+# Estou no CRC         11
+# Contador:  10
+# Estou no CRC         12
+# Contador:  11
+# Estou no CRC         13
+# Contador:  12
+# Estou no CRC         14
+# Contador:  13
+# Estou no CRC         15
+# Contador:  14
+# Estou no CRC Delimiter
+# Estou no ACK
+# 
+# 
+# 
+# Estou no primeiro Bit de Erro
+# 
+# 
+# 
+# ----------RELATORIO DO FRAME----------
+# 
+# 
+# RTR: 0 0(Data) e 1(Remote)
+# IDE: 1 0(Base) e 1(Extended)
+# EDL: 1 0(CAN) e 1(CAN FD)
+# BRS: 0 0(Mantem) e 1(Muda)
+# Identifier:    0
+# Identifier Extended:      8
+# DLC:  2
+# EOF:   0 (Tem que ser 127)
+# CRC Delimiter: 0
+# ACK Delimiter: 0
+# 
+# 
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# Estou no Overload ou Error
+# ** Note: $stop    : F:/Base Remote FRAME MAKER/BR_Frame_Maker_TB.v(719)
+#    Time: 4014 ps  Iteration: 0  Instance: /BR_Frame_Maker_TB
+# Break in Module BR_Frame_Maker_TB at F:/Base Remote FRAME MAKER/BR_Frame_Maker_TB.v line 719
+# End time: 16:46:12 on Nov 19,2017, Elapsed time: 0:11:41
+# Errors: 0, Warnings: 2

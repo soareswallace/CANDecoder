@@ -1,3 +1,0 @@
-module bitStuff_TB;
-
-reg reset, SP, RX, F_STF,

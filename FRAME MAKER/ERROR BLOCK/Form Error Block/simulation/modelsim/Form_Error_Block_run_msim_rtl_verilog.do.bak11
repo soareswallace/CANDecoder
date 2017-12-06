@@ -1,9 +1,0 @@
-transcript on
-if {[file exists rtl_work]} {
-	vdel -lib rtl_work -all
-}
-vlib rtl_work
-vmap work rtl_work
-
-vlog -vlog01compat -work work +incdir+F:/ERROR\ BLOCK/Form\ Error\ Block {F:/ERROR BLOCK/Form Error Block/Form_Error_Block.v}
-

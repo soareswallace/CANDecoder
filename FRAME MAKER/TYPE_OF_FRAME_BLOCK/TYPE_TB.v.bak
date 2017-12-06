@@ -1,5 +1,0 @@
-module TYPE_TB;
-
-reg reset, SP, EDL, RTR;
-
-endmodule

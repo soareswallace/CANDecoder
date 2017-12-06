@@ -1,0 +1,66 @@
+module Stuff_Block(
+	input reset, RX, SP_old, F_STF,
+	output reg SP
+);
+
+reg [8:0] cont;
+reg previous_bit;
+
+initial previous_bit = ~RX;
+initial SP = 1'b0;
+
+always@(posedge SP_old) begin
+	if(reset == 1) begin
+		previous_bit = ~RX;
+		cont <= 9'd0;
+	end
+	if(F_STF == 1'b0) begin
+		if(previous_bit == RX) begin
+			if(cont >= 9'd10) begin
+				cont <= 9'd0;
+			end
+			if(cont <= 9'd8) begin
+				cont <= cont + 9'd1;
+				SP = ~SP;
+			end
+		end
+		else begin
+			SP = ~SP;
+			cont <= 9'd0;
+		end
+		previous_bit <= RX;
+	end
+	else begin
+		SP = ~SP;
+		cont <= 9'd0;
+		previous_bit <=  RX;
+	end
+end
+//always@(negedge SP_old) begin
+//	if(reset == 1) begin
+//		previous_bit = ~RX;
+//		cont <= 9'd0;
+//	end
+//	if(F_STF == 1'b0) begin
+//		if(previous_bit == RX) begin
+//			if(cont >= 9'd10) begin
+//				cont <= 9'd0;
+//			end
+//			if(cont <= 9'd8) begin
+//				cont <= cont + 9'd1;
+//				SP = ~SP;
+//			end
+//		end
+//		else begin
+//			SP = ~SP;
+//			cont <= 9'd0;
+//		end
+//		previous_bit <= RX;
+//	end
+//	else begin
+//		SP = ~SP;
+//		cont <= 9'd0;
+//		previous_bit <=  RX;
+//	end
+//end
+endmodule

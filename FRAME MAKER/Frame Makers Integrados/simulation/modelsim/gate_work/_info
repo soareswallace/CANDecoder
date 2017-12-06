@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/BROE Frame Maker/simulation/modelsim
+vFrame_Makers
+Z1 !s110 1511134829
+!i10b 1
+!s100 2Em]0VEhfmCLjhfL;bM5R2
+ILI7akQ]SLF;UDKST5Y_in3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1511134102
+8Frame_Makers.vo
+FFrame_Makers.vo
+L0 32
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1511134828.000000
+!s107 Frame_Makers.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Frame_Makers.vo|
+!i113 1
+Z4 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+Z5 tCvgOpt 0
+n@frame_@makers
+vFrame_Makers_TB
+R1
+!i10b 1
+!s100 M8gWl]Ok0]iCenYI6H5cf1
+I5R5gLiK:438TnNe1F2MMT3
+R2
+R0
+w1511131492
+8F:/BROE Frame Maker/Frame_Makers_TB.v
+FF:/BROE Frame Maker/Frame_Makers_TB.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1511134829.000000
+!s107 F:/BROE Frame Maker/Frame_Makers_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/BROE Frame Maker|F:/BROE Frame Maker/Frame_Makers_TB.v|
+!i113 1
+R4
+!s92 -vlog01compat -work work {+incdir+F:/BROE Frame Maker}
+R5
+n@frame_@makers_@t@b
